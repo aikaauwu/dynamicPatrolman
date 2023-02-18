@@ -6,7 +6,7 @@
 <meta charset="ISO-8859-1">
 <style>
 .container{
-  background: #fff;
+   background: #fff;
   width: 410px;
   height: 600px;
   padding: 30px;
@@ -72,16 +72,6 @@ form .btn:hover button{
 
 }
 
-form .signup-link{
-  text-align: center;
-}
-form .signup-link a{
-  color: #ff0066;
-  text-decoration: none;
-}
-form .signup-link a:hover{
-  text-decoration: underline;
-}
 
 .btn-group button {
   background-color: #728FCE; /* Green background */
@@ -90,7 +80,7 @@ form .signup-link a:hover{
   padding: 10px 24px; /* Some padding */
   cursor: pointer; /* Pointer/hand icon */
   float: left; /* Float the buttons side by side */
-
+  text-decoration:none;
 }
 
 /* Clear floats (clearfix hack) */
@@ -100,7 +90,10 @@ form .signup-link a:hover{
   display: table;
 }
 
-
+.btn-group button:not(:last-child) {
+  border-right: none; /* Prevent double borders */
+  text-decoration:none;
+}
 
 /* Add a background color on hover */
 .btn-group button:hover {
@@ -115,74 +108,47 @@ img.avatar {
   width: 40%;
   border-radius: 50%;
 }
-form .signup-link{
-  text-align: center;
-}
-form .signup-link a{
-  color: #ff0066;
-  text-decoration: none;
-}
-form .signup-link a:hover{
-  text-decoration: underline;
-}
 a {text-decoration:none;}
-</style>
-</head>
+
+</style></head>
 <body style="margin:0; padding:0; font-family:Arial;background-color:#6667AB;">
 
     <div class="center">
 	
          <div class="container">
-	
 		 
-            <div class="text"><b>Residents Login</b></div>
+		 
+            <div class="text"><b>Zulmittee Login</b></div>
 			<div id="frmRegistration">
             <form action="login_code.php">
 			<div class="hero">
 			
-			<form action="/action_page.php" method="post">
+			
   <div class="imgcontainer">
-    <img src="img/residents.png" alt="Avatar" class="avatar">
+    <img src="img/comm.png" alt="Avatar" class="avatar">
   </div>
 
 <div class="btn-group"style="width:100%">
-
-<button style="width:33.3%"><a href="login res.jsp">RESIDENT</button></a>
+<button style="width:33.3%"><a href="index.jsp">RESIDENT</button></a>
   <button style="width:33.3%"><a href="login patrolman.jsp">PATROLMAN</button></a>
   <button style="width:33.3%"><a href="login comm.jsp">COMMITTEE</button></a>
 </div>
 
+
 		 
-			 <form name="form" action="LoginResidentServlet" method="post" onsubmit="return validate()" class="mt">
+			
                <div class="data">
                   <label>Username</label>
-                  <input type="text" id ="username"  name="studUsername" required>
+                  <input type="text" id ="username" required>
                </div>
                <div class="data">
                   <label>Password</label>
                   <input type="password" id="password" required>
                </div>
                <div class="btn">
-                 <button type="submit" formaction="HOMEPAGE RESIDENTS.jsp"><b>login</b></button>
+                  <button type="submit" formaction="HOMEPAGE COM.jsp"><b>login</b></button>
                </div>
-			   <div class="signup-link">
-                  New Resident? <a href="Res Signup.jsp">Signup now</a>
-               </div>
-               
-               </form>
-            
-             <form name="form" action="LoginResidentServlet" method="post" onsubmit="return validate()" class="mt">
-							
-									<label for="" class="text-uppercase text-sm">Username</label>
-									<input type="text" placeholder="Username" name="studUsername" class="form-control mb">
-									<label for="" class="text-uppercase text-sm">Password</label>
-									<input type="password" placeholder="Password" name="studPassword" class="form-control mb">
-									
-									  <tr>
-         
-									<input type="submit" name="login" class="btn btn-primary btn-block" value="login" >
-								</form>
-			   
+             
 			  
 			   
             </form>
