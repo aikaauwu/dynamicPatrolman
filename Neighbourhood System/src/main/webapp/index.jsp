@@ -135,43 +135,49 @@ a {text-decoration:none;}
          <div class="container">
 	
 		 
-            <div class="text"><b>Residents Login</b></div>
-			<div id="frmRegistration">
-            <form action="login_code.php">
-			<div class="hero">
+            <div class="text"><b>Zulsidents Login</b></div>
+           
+				<div id="frmRegistration">
+           			 <form action="LoginResidentServlet">
+						<div class="hero">
 			
-			<form action="/action_page.php" method="post">
-  <div class="imgcontainer">
-    <img src="img/residents.png" alt="Avatar" class="avatar">
-  </div>
+		<form form name="form" action="LoginResidentServlet" method="post" onsubmit="return validate()">
+  									<div class="imgcontainer">
+    								<img src="img/residents.png" alt="Avatar" class="avatar">
+ 									 </div>
 
-<div class="btn-group"style="width:100%">
+				<div class="btn-group"style="width:100%">
 
-<button style="width:33.3%"><a href="login res.jsp">RESIDENT</button></a>
-  <button style="width:33.3%"><a href="login patrolman.jsp">PATROLMAN</button></a>
-  <button style="width:33.3%"><a href="login comm.jsp">COMMITTEE</button></a>
-</div>
+					<button style="width:33.3%"><a href="index.jsp">RESIDENT</a></button>
+  					<button style="width:33.3%"><a href="login patrolman.jsp">PATROLMAN</a></button>
+ 					<button style="width:33.3%"><a href="login comm.jsp">COMMITTEE</a></button>
+ 					
+				</div>
 
 		 
-			 <form name="form" action="LoginResidentServlet" method="post" onsubmit="return validate()" class="mt">
-               <div class="data">
+			 
+			 
+              	 <div class="data">
                   <label>Username</label>
                   <input type="text" id ="username"  name="residentUsername" required>
-               </div>
-               <div class="data">
+              	 </div>
+              	 
+               	<div class="data">
                   <label>Password</label>
                   <input type="password" id="password"  name="residentPassword" required>
-               </div>
+              	 </div>
           
-               
                <div class="btn">
-                 <button type="submit" formaction="HOMEPAGE RESIDENTS.jsp"><b>login</b></button>
+                 <button type="submit" name="login" ><b>login</b></button>
                </div>
+               
 			   <div class="signup-link">
                   New Resident? <a href="Res Signup.jsp">Signup now</a>
                </div>
                
-               </form>
+            </form>
+               
+             
             
        
 			  

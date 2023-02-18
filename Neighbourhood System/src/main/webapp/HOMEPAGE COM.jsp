@@ -149,8 +149,9 @@ a:hover, a:active {
 a{margin-right: 4px;}
 
 </style>
+
 </head>
-<body style="margin:0; padding:0; font-family:Arial;background-color:#7393B3;">
+<body style="margin:0; padding:0 ; font-family:Arial;background-color:#7393B3;">
    
 <div class="header">
 

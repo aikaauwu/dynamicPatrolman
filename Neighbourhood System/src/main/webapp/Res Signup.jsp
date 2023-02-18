@@ -79,37 +79,45 @@ form .btn:hover button{
          <div class="container">
 		 <a href="login res.jsp"><img src="img/close.png"></a>
             <div class="text"><b>sign Up </b></div>
-            <form action="#">
+            <form action="CreateResidentServlet" method="post">
+            
+            <div class="data">
+                  <label>Resident Id:</label>
+                  <input type="number" name="residentId" >
+               </div>
+               
 			   <div class="data">
                   <label>Name</label>
-                  <input type="text" required>
+                  <input type="text" name="residentName" required>
                </div>
                <div class="data">
                   <label>Phone Number</label>
-                  <input type="number" required>
+                  <input type="number" name="residentPhoneNum"  required>
                </div>
                <div class="data">
                   <label>Address</label>
-                  <input type="text" required>
+                  <input type="text" name="residentAddress"  required>
                </div>
 			   <div class="data">
                   <label>Email</label>
-                  <input type="email" required>
+                  <input type="email" name="residentEmail"  required>
                </div>
 			   <div class="data">
                   <label>Username</label>
-                  <input type="text" required>
+                  <input type="text" name="residentUsername" required>
                </div>
 			   <div class="data">
                   <label>Password</label>
-                  <input type="password" required>
+                  <input type="password" name="residentPassword"  required>
                </div>
 		
                <div class="btn">
-                  <button type="submit" formaction="login res.jsp"><b>Register</b></button>
+                  <button type="submit" name="login"><b>Register</b></button>
                </div>
             </form>
          </div>
       </div>
+      
+     
 </body>
 </html>

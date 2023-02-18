@@ -157,7 +157,7 @@ a:hover, a:active {
 </div>
  
 
-<div id="top" class="content2">
+<div id="top" class="content2" style = "centre">
 	    <h1><b>. RESIDENT  .</b></h1>
 		    <div class="wrap">
                 <div class = "card card1">

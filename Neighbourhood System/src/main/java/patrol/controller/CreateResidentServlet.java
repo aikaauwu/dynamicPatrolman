@@ -1,6 +1,6 @@
 package patrol.controller;
 
-import java.io.IOException;   
+import java.io.IOException;    
 
 
 import jakarta.servlet.RequestDispatcher;
@@ -37,20 +37,20 @@ public class CreateResidentServlet extends HttpServlet {
 		// TODO Auto-generated method stub
 		
 		Resident s = new Resident();
-		s.setResidentId(request.getParameter("residentId"));
+		s.setResidentId(Integer.parseInt(request.getParameter("residentId")));
 		s.setResidentUsername(request.getParameter("residentUsername"));
 		s.setResidentName(request.getParameter("residentName"));
 		s.setResidentPassword(request.getParameter("residentPassword"));
-		s.setResidentPhoneNum(Integer.parseInt(request.getParameter("residentPhoneNum")));
 		s.setResidentAddress(request.getParameter("residentAddress"));
 		s.setResidentEmail(request.getParameter("residentEmail"));
+		s.setResidentPhoneNum(Integer.parseInt(request.getParameter("residentPhoneNum")));
 		
 		//meow
 		
 		dao.addResident(s); //invoke method addShawl() in ShawlDAO
 		
 		request.setAttribute("residents", ResidentDAO.getResidentDetails());
-		RequestDispatcher view = request.getRequestDispatcher("loginStud.jsp"); //dia pergi mana lepas tu
+		RequestDispatcher view = request.getRequestDispatcher("index.jsp"); //dia pergi mana lepas tu
 		view.forward(request, response);
 		
 	}

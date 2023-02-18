@@ -1,6 +1,6 @@
 package patrol.controller;
  
-import java.io.IOException;    
+import java.io.IOException;     
 import jakarta.servlet.ServletException;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
@@ -16,7 +16,7 @@ public class LoginResidentServlet extends HttpServlet {
     {
     }
  
-    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
  
         //Here username and password are the names which I have given in the input box in Login.jsp page. Here I am retrieving the values entered by the user and keeping in instance variables for further use.
  
@@ -42,7 +42,7 @@ public class LoginResidentServlet extends HttpServlet {
          else
          {
              request.setAttribute("errMessage", userValidate); //If authenticateUser() function returnsother than SUCCESS string it will be sent to Login page again. Here the error message returned from function has been stored in a errMessage key.
-             request.getRequestDispatcher("/login res.jsp").forward(request, response);//forwarding the request
+             request.getRequestDispatcher("/index.jsp").forward(request, response);//forwarding the request
          }
     }
 }

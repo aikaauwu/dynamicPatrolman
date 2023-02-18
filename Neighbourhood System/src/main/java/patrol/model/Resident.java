@@ -2,7 +2,7 @@ package patrol.model;
 
 public class Resident {
 	
-	private String residentId;
+	private int residentId;
 	private String residentUsername;
 	private String residentPassword;
 	private String residentName;
@@ -10,10 +10,10 @@ public class Resident {
 	private String residentAddress;
 	private String residentEmail;
 	
-	public String getResidentId() {
+	public int getResidentId() {
 		return residentId;
 	}
-	public void setResidentId(String residentId) {
+	public void setResidentId(int residentId) {
 		this.residentId = residentId;
 	}
 	public String getResidentUsername() {

@@ -1,17 +1,19 @@
 package patrol.dao;
 
 /**
- * Author: FES
+ * Author: FES 
  * Date: 15 January 2023
  * Purpose: CSC584 Assignment 2
  * Student name:
  * Student id:
  */
- 
-import java.sql.*;    
+  
+import java.sql.*;     
 import java.util.*;
 import java.util.Date;
+
 import patrol.connection.ConnectionManager;
+import patrol.model.Resident;
 import patrol.model.*;
 
 public class ResidentDAO {
@@ -20,7 +22,7 @@ public class ResidentDAO {
 	private static Statement stmt = null;
 	private static ResultSet rs = null;
 	private static String sql;
-	private String residentId;
+	private int residentId;
 	private String residentUsername,residentPassword,residentName,residentAddress,residentEmail;
 	private int residentPhoneNum;
 	
@@ -78,7 +80,7 @@ public class ResidentDAO {
 			
 			rs = ps.executeQuery();
 			if(rs.next()) {
-			resident.setResidentId(rs.getString("residentId"));
+			resident.setResidentId(rs.getInt("residentId"));
 			resident.setResidentUsername(rs.getString("residentUsername"));
 			resident.setResidentPassword(rs.getString("residentPassword"));
 			resident.setResidentAddress(rs.getString("residentAddress"));
@@ -96,85 +98,35 @@ public class ResidentDAO {
 	}
 
 	//Complete addOrder() method
-	public void addResident(Resident bean) {
+		public void addResident(Resident bean) {
 		
-		//get values
-		/*
-		name = bean.getName();
-		brand  = bean.getBrand();
-		color = bean.getColor();
-		material = bean.getMaterial();
-		price = bean.getPrice();
-		quantity = bean.getQuantity();
-		
-		//mybaju1
-		orderId = bean.getOrderId();
-		amount = bean.getAmount();
-		sleeve = bean.getSleeve();
-		shoulder  = bean.getShoulder();
-		chest = bean.getChest();
-		topLength = bean.getToplength();
-		waist = bean.getWaist();
-		hip = bean.getHip();
-		bottomLength = bean.getBottomLength();
-		customerId = bean.getCustomerId();*/
-		
-		/*private String residentId;
-		private String residentUsername,residentPassword,residentName,residentAddress,residentEmail;
-		private int residentPhoneNum;
-		*/
-		
-		//mybaju2
 		residentId = bean.getResidentId();
-		residentUsername = bean.getResidentPassword();
+		residentUsername = bean.getResidentUsername();
 		residentName = bean.getResidentName();
-		residentAddress = bean.getResidentAddress();
 		residentEmail = bean.getResidentEmail();
+		residentPassword = bean.getResidentPassword();
 		residentPhoneNum = bean.getResidentPhoneNum();
-		
+		residentAddress = bean.getResidentAddress();
 
 		try {			
 			//call getConnection() method
 			con = ConnectionManager.getConnection();
-
-			//create statement
-			
-			/*
-			ps = con.prepareStatement("INSERT INTO shawl(name,brand,color,material,price,quantity)VALUES(?,?,?,?,?,?)");
-			ps.setString(1, name);
-			ps.setString(2, brand);
-			ps.setString(3, color);
-			ps.setString(4, material);
-			ps.setDouble(5, price);
-			ps.setInt(6, quantity);
-			
-			//mybaju1
-			
-			ps = con.prepareStatement("INSERT INTO(orderId,amount,sleeve,shoulder,chest, topLength, waist, hip, bottomLength,customerId)VALUES(?,?,?,?,?,?,?,?,?,?)");
-			ps.setInt(1,orderId);
-			ps.setDouble(2, amount);
-			ps.setFloat(3, sleeve);
-			ps.setFloat(4, shoulder);
-			ps.setFloat(5, chest);
-			ps.setFloat(6, topLength);
-			ps.setFloat(7, waist);
-			ps.setFloat(8,hip);
-			ps.setFloat(9,bottomLength);
-			ps.setInt(10,customerId);*/
 			
 			/*private String residentId;
 			private String residentUsername,residentPassword,residentName,residentAddress,residentEmail;
 			private int residentPhoneNum;
 			*/
-			
-			//mybaju2
-			ps = con.prepareStatement("INSERT INTO resident(residentUsername,residentPassword,residentName,residentAddress,residentEmail,residentPhoneNum)VALUES(?,?,?,?,?,?)");
-			ps.setString(1, residentUsername);
-			ps.setString(2, residentPassword);
-			ps.setString(3,residentName);
-			ps.setString(4, residentAddress);
-			ps.setString(5, residentEmail);
-			ps.setInt(6, residentPhoneNum);
+	
+
+			//create statement
+			ps = con.prepareStatement("INSERT INTO resident(residentId,residentUsername,residentPassword,residentName,residentAddress,residentEmail,residentPhoneNum)VALUES(?,?,?,?,?,?,?)");
+			ps.setInt(1,residentId);
+			ps.setString(2,residentUsername);
+			ps.setString(3,residentPassword);
+			ps.setString(4,residentName);
+			ps.setString(5,residentAddress);
+			ps.setString(6,residentEmail);
+			ps.setInt(7,residentPhoneNum);
 
 			//execute query
 			ps.executeUpdate();
@@ -183,9 +135,11 @@ public class ResidentDAO {
 			//close connection
 			con.close();
 
-		}catch(Exception e) {
+			} 
+			
+			catch(Exception e) {
 			e.printStackTrace();				
-		}
+			}
 	}	
 
 	//Complete deleteOrder() method
@@ -232,7 +186,7 @@ public class ResidentDAO {
 					while(rs.next()) {		//process result
 						Resident s = new Resident();
 						
-						s.setResidentId(rs.getString("residentId"));
+						s.setResidentId(rs.getInt("residentId"));
 						s.setResidentUsername(rs.getString("residentUsername"));
 						s.setResidentPassword(rs.getString("residentPassword"));
 						s.setResidentName(rs.getString("residentName"));
@@ -279,7 +233,7 @@ public class ResidentDAO {
 			ps.setString(4, residentAddress);
 			ps.setString(5, residentEmail);
 			ps.setInt(6, residentPhoneNum);
-			ps.setString(7, residentId);
+			ps.setInt(7, residentId);
 			
 			//4. execute query
 			ps.executeUpdate();
