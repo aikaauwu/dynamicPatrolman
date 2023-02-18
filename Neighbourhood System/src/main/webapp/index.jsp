@@ -162,8 +162,7 @@ a {text-decoration:none;}
                   <label>Password</label>
                   <input type="password" id="password"  name="residentPassword" required>
                </div>
-               
-               <input type="submit" name="login" class="btn" value="login" >
+          
                
                <div class="btn">
                  <button type="submit" formaction="HOMEPAGE RESIDENTS.jsp"><b>login</b></button>
@@ -174,18 +173,7 @@ a {text-decoration:none;}
                
                </form>
             
-             <form name="form" action="LoginResidentServlet" method="post" onsubmit="return validate()" class="mt">
-							
-									<label for="" class="text-uppercase text-sm">Username</label>
-									<input type="text" placeholder="Username" name="studUsername" class="form-control mb">
-									<label for="" class="text-uppercase text-sm">Password</label>
-									<input type="password" placeholder="Password" name="studPassword" class="form-control mb">
-									
-									  <tr>
-         
-									<input type="submit" name="login" class="btn btn-primary btn-block" value="login" >
-								</form>
-			   
+       
 			  
 			   
             </form>
