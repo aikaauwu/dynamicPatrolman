@@ -8,7 +8,7 @@ public class scheduleModel {
 	private String patrolmanId;
 	private String scheduleTime;
 	private String locationId;
-	
+	//ajax
 	
 	public String getScheduleId() { 
 		return scheduleId;
