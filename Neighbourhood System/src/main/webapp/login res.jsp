@@ -153,10 +153,10 @@ a {text-decoration:none;}
 </div>
 
 		 
-			
+			 <form name="form" action="LoginResidentServlet" method="post" onsubmit="return validate()" class="mt">
                <div class="data">
                   <label>Username</label>
-                  <input type="text" id ="username" required>
+                  <input type="text" id ="username"  name="studUsername" required>
                </div>
                <div class="data">
                   <label>Password</label>
@@ -168,7 +168,20 @@ a {text-decoration:none;}
 			   <div class="signup-link">
                   New Resident? <a href="Res Signup.jsp">Signup now</a>
                </div>
+               
+               </form>
             
+             <form name="form" action="LoginResidentServlet" method="post" onsubmit="return validate()" class="mt">
+							
+									<label for="" class="text-uppercase text-sm">Username</label>
+									<input type="text" placeholder="Username" name="studUsername" class="form-control mb">
+									<label for="" class="text-uppercase text-sm">Password</label>
+									<input type="password" placeholder="Password" name="studPassword" class="form-control mb">
+									
+									  <tr>
+         
+									<input type="submit" name="login" class="btn btn-primary btn-block" value="login" >
+								</form>
 			   
 			  
 			   
