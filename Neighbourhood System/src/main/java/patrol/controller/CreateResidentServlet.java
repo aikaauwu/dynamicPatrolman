@@ -45,6 +45,7 @@ public class CreateResidentServlet extends HttpServlet {
 		s.setResidentAddress(request.getParameter("residentAddress"));
 		s.setResidentEmail(request.getParameter("residentEmail"));
 		
+		//meow
 		
 		dao.addResident(s); //invoke method addShawl() in ShawlDAO
 		

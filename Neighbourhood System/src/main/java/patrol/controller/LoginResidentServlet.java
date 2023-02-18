@@ -25,6 +25,8 @@ public class LoginResidentServlet extends HttpServlet {
     	
     	Resident resident = new Resident(); //creating object for LoginBean class, which is a normal java class, contains just setters and getters. Bean classes are efficiently used in java to access user information wherever required in the application.
  
+    	//meow 
+    	
     	resident.setResidentUsername(residentUsername);
     	resident.setResidentPassword(residentPassword);
     	
