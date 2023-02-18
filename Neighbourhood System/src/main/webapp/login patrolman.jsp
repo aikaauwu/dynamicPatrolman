@@ -141,7 +141,7 @@ a {text-decoration:none;}
 <div class="btn-group"style="width:100%">
 
 
- <button style="width:33.3%"><a href="login res.jsp">RESIDENT</button></a>
+ <button style="width:33.3%"><a href="index.jsp">RESIDENT</button></a>
   <button style="width:33.3%"><a href="login patrolman.jsp">PATROLMAN</button></a>
   <button style="width:33.3%"><a href="login comm.jsp">COMMITTEE</button></a>
 </div>
