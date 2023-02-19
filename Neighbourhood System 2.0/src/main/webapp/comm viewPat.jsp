@@ -122,7 +122,7 @@ form .btn:hover button{
   color: white; /* White text */
   padding: 10px 24px; /* Some padding */
   cursor: pointer; /* Pointer/hand icon */
-  float: left; /* Float the buttons side by side */
+  float: left; /* Float the buttons side by sideajax*/
 
 }
 

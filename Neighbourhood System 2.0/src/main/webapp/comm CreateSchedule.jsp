@@ -82,7 +82,7 @@ form .btn:hover button{
 
 }
 
-/* Clear floats (clearfix hack) */
+/* Clear floats (clearfix hack) ajax */
 .btn-group:after {
   content: "";
   clear: both;
