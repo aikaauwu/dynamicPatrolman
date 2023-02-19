@@ -77,12 +77,12 @@ form .btn:hover button{
   border: 1px solid white; /* Green border */
   color: white; /* White text */
   padding: 10px 24px; /* Some padding */
-  cursor: pointer; /* Pointer/hand icon */
+  cursor: pointer; /* Pointer/hand iconajax*/
   float: left; /* Float the buttons side by side */
 
 }
 
-/* Clear floats (clearfix hack) */
+/* Clear floats (clearfix hack) ajax */
 .btn-group:after {
   content: "";
   clear: both;

@@ -41,52 +41,25 @@
   </servlet-mapping>
   <servlet>
     <description></description>
-    <display-name>viewPatrolman</display-name>
-    <servlet-name>viewPatrolman</servlet-name>
-    <servlet-class>patrol.controller.viewPatrolman</servlet-class>
+    <display-name>LoginPatrolmanServlet</display-name>
+    <servlet-name>LoginPatrolmanServlet</servlet-name>
+    <servlet-class>patrol.controller.LoginPatrolmanServlet</servlet-class>
   </servlet>
   <servlet-mapping>
-    <servlet-name>viewPatrolman</servlet-name>
-    <url-pattern>/viewPatrolman</url-pattern>
+    <servlet-name>LoginPatrolmanServlet</servlet-name>
+    <url-pattern>/LoginPatrolmanServlet</url-pattern>
   </servlet-mapping>
-  <servlet>
+  
+    <servlet>
     <description></description>
-    <display-name>viewSchedule</display-name>
-    <servlet-name>viewSchedule</servlet-name>
-    <servlet-class>patrol.controller.viewSchedule</servlet-class>
+    <display-name>CreatePatrolmanServlet</display-name>
+    <servlet-name>CreatePatrolmanServlet</servlet-name>
+    <servlet-class>patrol.controller.CreatePatrolmanServlet</servlet-class>
   </servlet>
   <servlet-mapping>
-    <servlet-name>viewSchedule</servlet-name>
-    <url-pattern>/viewSchedule</url-pattern>
+    <servlet-name>CreatePatrolmanServlet</servlet-name>
+    <url-pattern>/CreatePatrolmanServlet</url-pattern>
   </servlet-mapping>
-  <servlet>
-    <description></description>
-    <display-name>scheduleDao</display-name>
-    <servlet-name>scheduleDao</servlet-name>
-    <servlet-class>patrol.dao.scheduleDao</servlet-class>
-  </servlet>
-  <servlet-mapping>
-    <servlet-name>scheduleDao</servlet-name>
-    <url-pattern>/scheduleDao</url-pattern>
-  </servlet-mapping>
-  <servlet>
-    <description></description>
-    <display-name>createScheduleController</display-name>
-    <servlet-name>createScheduleController</servlet-name>
-    <servlet-class>patrol.controller.createScheduleController</servlet-class>
-  </servlet>
-  <servlet-mapping>
-    <servlet-name>createScheduleController</servlet-name>
-    <url-pattern>/createScheduleController</url-pattern>
-  </servlet-mapping>
-  <servlet>
-    <description></description>
-    <display-name>listScheduleController</display-name>
-    <servlet-name>listScheduleController</servlet-name>
-    <servlet-class>patrol.controller.listScheduleController</servlet-class>
-  </servlet>
-  <servlet-mapping>
-    <servlet-name>listScheduleController</servlet-name>
-    <url-pattern>/listScheduleController</url-pattern>
-  </servlet-mapping>
+  
+
 </web-app>

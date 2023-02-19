@@ -141,11 +141,11 @@ a {text-decoration:none;}
 			
                <div class="data">
                   <label>Username</label>
-                  <input type="text" id ="username"  name="commUsername" required>
+                  <input type="text" id ="username"  name="commUsername">
                </div>
                <div class="data">
                   <label>Password</label>
-                  <input type="password" id="password"  name="commPassword" required>
+                  <input type="password" id="password"  name="commPassword">
                </div>
                <div class="btn">
                   <button type="submit" name=login><b>login</b></button>

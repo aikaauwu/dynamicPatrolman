@@ -119,7 +119,7 @@ body {
   text-align: center;
   padding: 10px;
   text-decoration: none;
-  font-size: 15px; 
+  font-size: 13px; 
   line-height: 10px;
   border-radius: 10px;
   
@@ -128,7 +128,7 @@ a:link, a:visited {
   background-color: #7393B3;
   color: black;
   border: 2px solid #7393B3;
-  padding: 15px 3px;
+  padding: 5px 3px;
   text-align: center;
   text-decoration: none;
   display: inline-block;
@@ -169,7 +169,7 @@ a{margin-right: 4px;}
 			        <b href=""><img class="card-img" src="img/calander img.png" alt="SCHEDULE" /></b>
 		            <h3>SCHEDULE</h3>
 		
-				<a href="comm .jsp" target="_blank">View Schedule</a>
+				<a href="viewSchedule.jsp" target="_blank">View Schedule</a>
 				<a href="comm ViewCreateSchedule.jsp" target="_blank">Create Schedule</a>
 				<hr>.</hr>
 				
@@ -181,7 +181,7 @@ a{margin-right: 4px;}
 			        <b href=""><img class="card-img" src="img/report p.png" alt="REPORT" /></b>
 			        <h3>REPORT</h3>
 				
-					<a href="default.asp" target="_blank">View Report</a>
+					<a href="viewReport.jsp" target="_blank">View Report</a>
 					<hr>.</hr>
 				
 		        </div>
@@ -190,6 +190,7 @@ a{margin-right: 4px;}
 			        <b href=""><img class="card-img" src="img/pm.png" alt="patrolman" /></b>
 			        <h3>PATROLMAN</h3>
 				
+					<a href="comm createPat.jsp" target =" blank">Create Patrolman</a>
 					<a href="comm ViewUpPat.jsp" target="_blank">Update Patrolman</a>
 					<a href="comm viewPat.jsp" target="_blank">View Patrolman</a>
 					<hr>.</hr>
