@@ -159,12 +159,12 @@ a {text-decoration:none;}
 			 
               	 <div class="data">
                   <label>Username</label>
-                  <input type="text" id ="username"  name="residentUsername" required>
+                  <input type="text" id ="username"  name="residentUsername">
               	 </div>
               	 
                	<div class="data">
                   <label>Password</label>
-                  <input type="password" id="password"  name="residentPassword" required>
+                  <input type="password" id="password"  name="residentPassword">
               	 </div>
           
                <div class="btn">
