@@ -32,8 +32,8 @@ public class viewSchedule extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		String scheduleId = String.parseString(request.getParameter("id"));
-		request.setAttribute("s",scheduleDao.getScheduleId(scheduleId));
+		String scheduleId = request.getParameter("scheduleId");
+		request.setAttribute("schedule",scheduleDao.getScheduleDetails());
 		RequestDispatcher view = request.getRequestDispatcher("viewSchedule.jsp"); //schedule page
 		view.forward(request, response);
 	}

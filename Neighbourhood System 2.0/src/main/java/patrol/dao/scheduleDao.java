@@ -8,7 +8,7 @@ package patrol.dao;
  * Student id:
  */
  
-import java.sql.*;     
+import java.sql.*;      
 import java.util.*;
 import java.util.Date;
 
@@ -62,7 +62,7 @@ public class scheduleDao {
 		}
 	}
 	
-	public static List<scheduleModel> getScheduleId() { 
+	public static List<scheduleModel> getScheduleDetails() { 
 		List<scheduleModel> schedules = new ArrayList<scheduleModel>(); 
 		try { 
 			//call getConnection() method

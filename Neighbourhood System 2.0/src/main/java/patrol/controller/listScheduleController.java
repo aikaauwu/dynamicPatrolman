@@ -31,8 +31,8 @@ public class listScheduleController extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		request.setAttribute("schedules",scheduleDao.getScheduleDetaols());
-		RequestDispatcher view = request.getRequestDispatcher("listSchedule.jsp");
+		request.setAttribute("schedules",scheduleDao.getScheduleDetails());
+		RequestDispatcher view = request.getRequestDispatcher("viewSchedule.jsp");
 		view.forward(request,  response);
 	}
 

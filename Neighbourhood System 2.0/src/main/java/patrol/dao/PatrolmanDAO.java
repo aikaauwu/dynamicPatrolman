@@ -8,7 +8,7 @@ package patrol.dao;
  * Student id:
  */
  
-import java.sql.*;      
+import java.sql.*;     
 import java.util.*;
 import java.util.Date;
 import patrol.connection.ConnectionManager;
@@ -49,11 +49,11 @@ public class PatrolmanDAO {
 			patrolmanPassword = bean.getPatrolmanPassword();
 			*/
 			
-			ps = con.prepareStatement("INSERT INTO patrolman(patrolmanId,residentId,patrolmanUsername,patrolmanPassword)VALUES(?,?,?,?)");
-			ps.setString(1,patrolmanId);
-			ps.setInt(2,residentId);
-			ps.setString(3,patrolmanUsername);
-			ps.setString(4,patrolmanPassword);
+			ps = con.prepareStatement("INSERT INTO patrolman(patrolmanId,residentId,patrolmanUsername,patrolmanPassword)VALUES(?,?,?)");
+			ps.setString(1, patrolmanId);
+			ps.setInt(2, residentId);
+			ps.setString(2, patrolmanUsername);
+			ps.setString(3,patrolmanPassword);
 			
 			//execute query
 			ps.executeUpdate();
@@ -66,44 +66,6 @@ public class PatrolmanDAO {
 			e.printStackTrace();				
 		}
 	}	
-	
-	public static List<Patrolman> getPatrolmanDetails() { 
-		List<Patrolman> patrolman = new ArrayList<Patrolman>(); 
-		try { 
-			//call getConnection() method
-			con = ConnectionManager.getConnection();
-
-			//create statement
-			stmt = con.createStatement();
-			String sql = "SELECT * FROM patrolman ORDER BY patrolmanId ";
-
-			
-			//execute query
-			rs = stmt.executeQuery(sql);
-				
-			/*private String residentId;
-			private String residentUsername,residentPassword,residentName,residentAddress,residentEmail;
-			private int residentPhoneNum;
-			*/
-					while(rs.next()) {		//process result
-						Patrolman s = new Patrolman();
-						s.setPatrolmanId(rs.getString("patrolmanId"));
-						s.setResidentId(rs.getInt("residentId"));
-						s.setPatrolmanPassword(rs.getString("patrolmanPassword"));
-						s.setPatrolmanUsername(rs.getString("patrolmanUsername"));
-						patrolman.add(s);
-					}
-			//close connection
-					con.close();
-
-			} 
-			catch (Exception e) 
-			{ 
-			e.printStackTrace(); 
-			}
-
-			return patrolman; 
-			}
 	
 	public String authenticateUser(Patrolman patrolman)
     {
@@ -174,7 +136,42 @@ public class PatrolmanDAO {
 	            return "Invalid user credentials"; // Return appropriate message in case of failure
 	        }
 	
-
+//complete getpatrolmanId() method
+	public static List<Patrolman> getPatrolmanDetails(){
+		List<Patrolman> patrolman = new ArrayList<Patrolman>();
+		try {
+			
+			//call getConnection() method
+			con = ConnectionManager.getConnection();
+			
+			//create statement
+			stmt = con.createStatement();
+			String sql = "SELECT * FROM patrolman ORDER BY patrolmanId";
+			
+			//execute query
+			rs = stmt.executeQuery(sql);
+			
+			while(rs.next()) {
+				Patrolman s = new Patrolman();
+				s.setPatrolmanId(rs.getString("patrolmanId"));
+				s.setResidentId(rs.getInt("residentId"));
+				s.setPatrolmanUsername(rs.getString("patrolmanUsername"));
+				s.setPatrolmanPassword(rs.getString("patrolmanPassword"));
+				
+				patrolman.add(s);
+			}
+			
+			//close connection
+			con.close();
+		}
+		catch (Exception e)
+		{
+			e.printStackTrace();
+		}
+		
+		return patrolman;
+		}
+	}
 	
 
-}
+
