@@ -155,6 +155,7 @@ form .btn:hover button{
     <th>Schedule ID</th>
     <th>Time</th>
 	<th>Date</th>
+	<th>Tools</th>
 	   
   </tr>
   <tr>
@@ -163,6 +164,7 @@ form .btn:hover button{
     <td>-</td>
 	 <td>-</td>
 	 <td>-</td>
+	 <td><a href="viewDetailSchedule.jsp" class="button button1"><b>VIEW </b></a></td>
   </tr>
   
   <tr>
@@ -171,6 +173,7 @@ form .btn:hover button{
     <td>-</td>
 	 <td>-</td>
 	 <td>-</td> 
+	 <td><a href="viewDetailSchedule.jsp" class="button button1"><b>CREATE </b></a></td>
   </tr>
  
 </table>

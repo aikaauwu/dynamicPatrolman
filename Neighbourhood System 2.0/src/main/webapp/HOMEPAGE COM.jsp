@@ -181,7 +181,7 @@ a{margin-right: 4px;}
 			        <b href=""><img class="card-img" src="img/report p.png" alt="REPORT" /></b>
 			        <h3>REPORT</h3>
 				
-					<a href="default.asp" target="_blank">View Report</a>
+					<a href="viewReport.jsp" target="_blank">View Report</a>
 					<hr>.</hr>
 				
 		        </div>

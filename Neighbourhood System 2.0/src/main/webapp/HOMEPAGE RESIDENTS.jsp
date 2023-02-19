@@ -176,7 +176,7 @@ a:hover, a:active {
 			        <h3>REPORT</h3>
 				
 				
-					<a href="" target="_blank">View Report</a>
+					<a href="viewRep.jsp" target="_blank">View Report</a>
 					<hr>.</hr>
 				
 		        </div>
