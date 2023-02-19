@@ -1,6 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
-<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+    <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -116,44 +116,44 @@ a {text-decoration:none;}
 		 
             <div class="text"><b>Profile</b></div>
 			<div id="frmRegistration">
-            <form action="login_code.php">
+            <form>
 			<div class="hero">
 			
-			<form action="/action_page.php" method="post">
-  <div class="imgcontainer">
-  </div>
-
-
-		 
+			
+  					<div class="imgcontainer">
+  					</div>
+		
+			
+		 	
 				<div class="data">
-                  <label>Resident ID:</label>              
+                  <label>Zulsident ID: <c:out value="${resident.residentId}" /> </label>              
                </div>
                <div class="data">
-                  <label>Name:</label>              
+                  <label>Name: <c:out value="${resident.residentName}" /></label>              
                </div>
                <div class="data">
-                  <label>Phone Number:</label>      
+                  <label>Phone Number: <c:out value="${resident.residentPhoneNum}" /></label>      
                </div>
 			   <div class="data">
-                  <label>Address:</label>      
+                  <label>Address: <c:out value="${resident.residentAddress}" /></label>      
                </div>
 			   <div class="data">
-                  <label>Email:</label>      
+                  <label>Email: <c:out value="${resident.residentEmail}" /></label>      
                </div>
 			   <div class="data">
-                  <label>Username:</label>      
+                  <label>Username:<c:out value="${resident.residentUsername}" /></label>      
                </div>
 			   <div class="data">
-                  <label>Password:</label>      
+                  <label>Password:<c:out value="${resident.residentPassword}" /></label>      
                </div>
                <div class="btn">
-                 <button type="submit" formaction="R updateProdile.jsp"><b>UPDATE</b></button>
+                 <button type="submit" href="UpdateShawlController?id=<c:out value="${s.id}"/>""><b>UPDATE</b></button>
                </div>
-			   
-			   
-			  
-			   
+           
+			
             </form>
+            
+            </div>
 			</div>
          </div>
       </div>

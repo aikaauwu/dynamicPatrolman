@@ -8,9 +8,10 @@ package patrol.dao;
  * Student id:
  */
   
-import java.sql.*;     
+import java.sql.*;       
 import java.util.*;
 import java.util.Date;
+
 
 import patrol.connection.ConnectionManager;
 import patrol.model.Resident;
@@ -27,7 +28,7 @@ public class ResidentDAO {
 	private int residentPhoneNum;
 	
 	//Complete getCustomerOrder() method
-	public static Resident getResidentDetail(String residentId) { 
+	public static Resident getResidentDetail(int residentId) { 
 		Resident resident = new Resident();
 		try {
 			//call getConnection() method
@@ -44,7 +45,7 @@ public class ResidentDAO {
 			
 			//MYBAJU2
 			ps = con.prepareStatement("SELECT * FROM resident WHERE residentId=?");
-			ps.setString(1, residentId);
+			ps.setInt(1, residentId);
 
 			//execute query
 			
@@ -81,11 +82,12 @@ public class ResidentDAO {
 			rs = ps.executeQuery();
 			if(rs.next()) {
 			resident.setResidentId(rs.getInt("residentId"));
+			resident.setResidentName(rs.getString("residentName"));
 			resident.setResidentUsername(rs.getString("residentUsername"));
 			resident.setResidentPassword(rs.getString("residentPassword"));
 			resident.setResidentAddress(rs.getString("residentAddress"));
 			resident.setResidentEmail(rs.getString("residentEmail"));
-			resident.setResidentPhoneNum(rs.getInt("residentAddress"));
+			resident.setResidentPhoneNum(rs.getInt("residentPhoneNum"));
 			
 			//close connection
 			con.close();
@@ -146,65 +148,47 @@ public class ResidentDAO {
 	//but in patrolman system takdak so takyah
 
 	//Complete getCustomerOrders() method
-	public static List<Resident> getResidentDetails() { 
-		List<Resident> resident = new ArrayList<Resident>(); 
-		try { 
-			//call getConnection() method
-			con = ConnectionManager.getConnection();
+		public static List<Resident> getResidentDetails() { 
+			List<Resident> resident = new ArrayList<Resident>(); 
+			try { 
+				//call getConnection() method
+				con = ConnectionManager.getConnection();
 
-			//create statement
-			stmt = con.createStatement();
-			String sql = "SELECT * FROM resident ORDER BY residentId";
+				//create statement
+				stmt = con.createStatement();
+				String sql = "SELECT * FROM resident ORDER BY residentId ";
 
-			
-			//execute query
-			rs = stmt.executeQuery(sql);
 				
-			/*
-			//mybaju1
-				while(rs.next()) {		//process result
-					Orders s = new Orders();
-					s.setOrderId(rs.getInt("orderId"));
-					s.setAmount(rs.getDouble("amount"));
-					s.setSleeve(rs.getFloat("sleeve"));
-					s.setShoulder(rs.getFloat("shoulder"));
-					s.setChest(rs.getFloat("chest"));
-					s.setTopLength(rs.getFloat("toplength"));
-					s.setWaist(rs.getFloat("waist"));
-					s.setHip(rs.getFloat("hip"));
-					s.setBottomLength(rs.getFloat("bottomLength"));
-					s.setCustomerId(rs.getInt("customerId"));
-					orders.add(s);*/
-			
-			//mybaju2
-			
-			/*private String residentId;
-			private String residentUsername,residentPassword,residentName,residentAddress,residentEmail;
-			private int residentPhoneNum;
-			*/
-			
-					while(rs.next()) {		//process result
-						Resident s = new Resident();
-						
-						s.setResidentId(rs.getInt("residentId"));
-						s.setResidentUsername(rs.getString("residentUsername"));
-						s.setResidentPassword(rs.getString("residentPassword"));
-						s.setResidentName(rs.getString("residentName"));
-						s.setResidentAddress(rs.getString("residentAddress"));
-						s.setResidentEmail(rs.getString("residentEmail"));
-						s.setResidentPhoneNum(rs.getInt("residentPhoneNum"));
-						
-						resident.add(s);
-					}
-			//close connection
-					con.close();
+				//execute query
+				rs = stmt.executeQuery(sql);
+					
+				/*private String residentId;
+				private String residentUsername,residentPassword,residentName,residentAddress,residentEmail;
+				private int residentPhoneNum;
+				*/
+						while(rs.next()) {		//process result
+							Resident s = new Resident();
+							s.setResidentId(rs.getInt("residentId"));
+							s.setResidentUsername(rs.getString("residentUsername"));
+							s.setResidentPassword(rs.getString("residentPassword"));
+							s.setResidentName(rs.getString("residentName"));
+							s.setResidentAddress(rs.getString("residentAddress"));
+							s.setResidentEmail(rs.getString("residentEmail"));
+							s.setResidentPhoneNum(rs.getInt("residentPhoneNum"));
+							
+							resident.add(s);
+						}
+				//close connection
+						con.close();
 
-		} catch (Exception e) { 
-			e.printStackTrace(); 
-		}
+				} 
+				catch (Exception e) 
+				{ 
+				e.printStackTrace(); 
+				}
 
-		return resident; 
-	}
+				return resident; 
+				}
 	
 	public void updateResident(Resident bean) {
 		

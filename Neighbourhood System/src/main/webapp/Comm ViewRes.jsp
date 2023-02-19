@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
+    <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -79,6 +80,7 @@ tr:nth-child(even) {
 <body style="margin:0; padding:0; font-family:Arial;background-color:white;">
     <div class="top">
 			<div class="navbar">
+			
 			    <div class="nav-logo" style="margin-left: 10%; margin-top: 1%;">
 		          
 			    </div>
@@ -86,50 +88,53 @@ tr:nth-child(even) {
 				<a href="HOMEPAGE COM.jsp"><img style="margin-left: -100px;" src="img/logout.png"></a>
 			</div>
 			
-			<div class="center">
+	</div>
+			
+			
+	<div class="center">
 	
          
-  <div class="imgcontainer">
-<div class="container">
-  <div class="row">
-    <div class="col-12">
-      <table class="table table-bordered">
+  		<div class="imgcontainer">
+				<div class="container">
+ 				<div class="row">
+    			<div class="col-12">
+     
+     	 <table class="table table-bordered">
+       
        <h2>VIEW RESIDENTS</h2>
 
-<table>
-  <tr>
-    <th>ID</th>
-	<th>Name</th>
-    <th>Address</th>
-	<th>Email</th>
-	<th>Username</th>
-    <th>Password</th>
-	 <th>Phone Number</th>
-	   
-  </tr>
-  <tr>
-    <td>-</td>
-    <td>-</td>
-    <td>-</td>
-	 <td>-</td>
-	  <td>-</td>
-	   <td>-</td>
-	 	   <td>-</td>
-
-  </tr>
-  <tr>
-     <td>-</td>
-    <td>-</td>
-    <td>-</td>
-	 <td>-</td>
-	  <td>-</td>
-	   <td>-</td>
-		   <td>-</td>
-
-  </tr>
- 
-</table>
-</div>
-	</div>
+			<table>
+							<tr>
+								<th>Resident Id</th>
+								<th>Name</th>
+								<th>Address</th>
+								<th>Email</th>
+								<th>UserName</th>
+								<th>Password</th>
+								<th>Phone Number</th>
+								<th colspan="3"></th>
+							</tr>
+							<c:forEach items="${residents}" var="resident">
+								<tr>
+									<td><c:out value="${resident.residentId}" /></td>
+									<td><c:out value="${resident.residentName}" /></td>
+									<td><c:out value="${resident.residentAddress}" /></td>
+									<td><c:out value="${resident.residentEmail}" /></td>
+									<td><c:out value="${resident.residentUsername}" /></td>
+									<td><c:out value="${resident.residentPassword}" /></td>
+									<td><c:out value="${resident.residentPhoneNum}" /></td>
+									<td><a href="CommViewResidentDetailServlet?action=view&residentId=<c:out value="${resident.residentId}"/>" class="button">View</a></td>
+							</c:forEach>
+			</table>
+			
+			</table>	
+			
+			
+						
+			</div>
+					</div>
+					</div>
+				</div>
+				</div>
 </body>
 </html>

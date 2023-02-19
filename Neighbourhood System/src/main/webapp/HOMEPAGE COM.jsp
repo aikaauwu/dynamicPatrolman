@@ -201,7 +201,7 @@ a{margin-right: 4px;}
 			        <h3>RESIDENT</h3>
 	
 					<a href="comm ViewUpdateRes.jsp" target="_blank">Update Resident</a>
-					<a href="Comm ViewRes.jsp" target="_blank">View Resident</a>
+					<a href="ListResidentController">View Resident</a>
 					<hr>.</hr>
 				
 		        </div>
