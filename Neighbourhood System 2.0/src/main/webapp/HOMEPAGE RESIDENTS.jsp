@@ -175,8 +175,7 @@ a:hover, a:active {
 			        <b href="PReport.html"><img class="card-img" src="img/report p.png" alt="REPORT" /></b>
 			        <h3>REPORT</h3>
 				
-				
-					<a href="viewRep.jsp" target="_blank">View Report</a>
+					<a href="res viewReport.jsp" target="_blank">View Report</a>
 					<hr>.</hr>
 				
 		        </div>

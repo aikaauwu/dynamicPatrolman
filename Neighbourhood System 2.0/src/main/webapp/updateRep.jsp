@@ -29,12 +29,12 @@
 	width: 200px;
 	cursor: pointer;
    
-} 
+}
 
 .container{
   background: #fff;
   width: 470px;
-  height: 550px;
+  height: 450px;
   padding: 30px;
   position: absolute;
   top: 10%;
@@ -143,9 +143,9 @@ a {text-decoration:none;}
 	<div class="center">
 	
          <div class="container">
-	      <a href="HOMEPAGE PAT.jsp"><img src="img/close.png"></a>
+	      <a href="pat viewReport.jsp"><img src="img/close.png"></a>
 		 
-            <div class="text"><b>CREATE REPORT</b></div>
+            <div class="text"><b>UPDATE REPORT</b></div>
 			
 			<form action="/action_page.php" method="post">
   <div class="imgcontainer">
@@ -153,32 +153,22 @@ a {text-decoration:none;}
 
 
 			<div class="data">
-                  <label>Patrolman ID:</label> 
-                  <input type="text" required>			  
+                  <label>Patrolman ID:</label> 	  
                </div>
 			
                <div class="data">
-                  <label>Username:</label> 	
-                  <input type="text" required>				  
+                  <label>Username:</label> 				  
                </div>
 			   
                <div class="data">
                   <label>Report Description:</label>  
                   <input type="text" required> 					
                </div>
-               
-               <div class="data">
-                  <label>Report Date:</label>  
-                  <input type="date" required> 					
-               </div>
 			  
                <div class="btn">
                  <button type="submit"><b>SUBMIT</b></button>
                </div>
                
-               <div class="btn">
-               	 <button type="reset"> <b>CLEAR</b></button>
-               </div>
 			   
             </form>
 			</div>

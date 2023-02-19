@@ -150,7 +150,7 @@ form .btn:hover button{
 
 <table>
   <tr>
-     <th>ID</th>
+     <th>Patrolman ID</th>
 	<th>Username</th>
     <th>Schedule ID</th>
     <th>Time</th>
@@ -181,8 +181,7 @@ form .btn:hover button{
     <td>-</td>
 	 <td>-</td>
 	 <td>-</td> 
-	 <td><a href="comm CreateSchedule.jsp" class="button button1"><b>CREATE </b></a></td>
-  </tr>
+	 <td><a href="viewDetailSchedule.jsp" class="button button1"><b>VIEW</b></a></td>
  
 </table>
 </div>

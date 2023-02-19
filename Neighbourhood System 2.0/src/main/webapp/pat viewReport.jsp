@@ -159,7 +159,7 @@ a{margin-right: 4px;}
   <div class="header-right">
   <a href="HOMEPAGE PAT.jsp">HOME</a>
    <a href="Pat Profile.jsp">PROFILE</a>
-    <a href="login patrolman.jsp">LOGOUT</a>
+    <a href="index.jsp">LOGOUT</a>
   </div>
 </div>
 			
@@ -171,17 +171,15 @@ a{margin-right: 4px;}
   <div class="row">
     <div class="col-12">
       <table class="table table-bordered">
-       <h2>PATROLMAN SCHEDULE</h2>
+       <h2>VIEW REPORT</h2>
 
 <table>
   <tr>
-     <th>Patrolman ID</th>
-	<th>Username</th>
-    <th>Schedule ID</th>
-    <th>Time</th>
-	<th>Date</th>
-	<th>Location</th>
-	<th>Tools</th>
+     <th>Report ID</th>
+	<th>Patrolman ID</th>
+    <th>Report Description</th>
+    <th>Date</th>
+    <th>Action</th>
 	   
   </tr>
   <tr>
@@ -189,20 +187,16 @@ a{margin-right: 4px;}
     <td>-</td>
     <td>-</td>
 	 <td>-</td>
-	 <td>-</td>
-	  <td><a href="viewDetailLocation.jsp" class="button button1"><b>VIEW </b></a></td>
-	 <td><a href="viewDetailSchedule.jsp" class="button button1"><b>VIEW </b></a></td>
-  </tr>
+	 <td><a href="updateRep.jsp" class="button button1"><b>UPDATE </b></a></td>
+	 </tr>
   
   <tr>
     <td>-</td>
     <td>-</td>
     <td>-</td>
 	 <td>-</td>
-	 <td>-</td> 
-	   <td><a href="viewDetailLocation.jsp" class="button button1"><b>VIEW </b></a></td>
-	 <td><a href="viewDetailSchedule.jsp" class="button button1"><b>VIEW </b></a></td>
-  </tr>
+	 <td><a href="updateRep.jsp" class="button button1"><b>UPDATE </b></a></td>
+	  </tr>
  
 </table>
 </div>
