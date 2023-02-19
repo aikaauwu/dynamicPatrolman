@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
+    <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -150,8 +151,11 @@ a:hover, a:active {
 <div class="header">
 
   <div class="header-right">
-    <a href="Res Profile.jsp">PROFILE</a>
+  Welcome, <%=request.getAttribute("residentUsername") %> 
+    <a href="ResidentViewProfileServlet?residentUsername=<%=request.getAttribute("residentUsername") %> ">PROFILE</a>
     <a href="index.jsp">LOGOUT</a>
+    
+  
 
   </div>
 </div>

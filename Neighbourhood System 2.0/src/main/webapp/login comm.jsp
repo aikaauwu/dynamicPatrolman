@@ -121,10 +121,9 @@ a {text-decoration:none;}
             <div class="text"><b>Zulmittee Login</b></div>
             
 			<div id="frmRegistration">
-            <form action="LoginCommitteeServlet">
 				<div class="hero">
 			
-			<form name="form" action="LoginCommitteeServlet" method="post" onsubmit="return validate()">
+			
  				 <div class="imgcontainer">
    					 <img src="img/comm.png" alt="Avatar" class="avatar">
   				 </div>
@@ -136,7 +135,7 @@ a {text-decoration:none;}
  				<button style="width:33.3%"><a href="login comm.jsp">COMMITTEE</button></a>
 				</div>
 
-
+<form name="form" action="LoginCommitteeServlet" method="post" onsubmit="return validate()">
 		 
 			
                <div class="data">

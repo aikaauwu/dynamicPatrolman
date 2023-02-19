@@ -89,4 +89,14 @@
     <servlet-name>viewLocation</servlet-name>
     <url-pattern>/viewLocation</url-pattern>
   </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>ResidentViewProfileServlet</display-name>
+    <servlet-name>ResidentViewProfileServlet</servlet-name>
+    <servlet-class>patrol.controller.ResidentViewProfileServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ResidentViewProfileServlet</servlet-name>
+    <url-pattern>/ResidentViewProfileServlet</url-pattern>
+  </servlet-mapping>
 </web-app>
