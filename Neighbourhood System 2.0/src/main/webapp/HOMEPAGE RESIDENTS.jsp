@@ -151,7 +151,7 @@ a:hover, a:active {
 
   <div class="header-right">
     <a href="Res Profile.jsp">PROFILE</a>
-    <a href="login res.jsp">LOGOUT</a>
+    <a href="index.jsp">LOGOUT</a>
 
   </div>
 </div>
