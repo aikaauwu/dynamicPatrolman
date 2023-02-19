@@ -13,31 +13,16 @@
 	
 }
 
-.navbar{
-	width: 100%;
-	margin: auto;
-	display: flex;
-	align-items: center;
-	justify-content: space-between;	
-	background-color: #A1B1F8;
-	margin-top:-10px;
-	height: 80px;
-	
-    
-}
-.nav-logo img{
-	width: 200px;
-	cursor: pointer;
-   
-}
 .content img{
     margin-left: 200;
 	margin-top: 100px;
 	
 }
 .container{
-  background: #A1B1F8;
-  width: 1325px;
+  background: #C5DEDC;
+  position: absolute;
+  top: 3%;
+  width: 1185px;
   height: 500px;
   padding: 30px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
@@ -117,26 +102,66 @@ form .btn:hover button{
 
 
 .btn-group button {
-  background-color: #728FCE; /* Green background */
-  border: 1px solid white; /* Green border */
+  background-color: #728FCE; /* Green yaoyao background */
+  border: 1px solid white; /* Green yaoyao border */
   color: white; /* White text */
   padding: 10px 24px; /* Some padding */
-  cursor: pointer; /* Pointer/hand icon ajax*/
-  float: left; /* Float the buttons side by sideajax*/
+  cursor: pointer; /* Pointer/hand icon */
+  float: left; /* Float the buttons side by side */
 
 }
 
+.header {
+  overflow: hidden;
+  background-color: #7393B3;
+  padding: 20px 10px;
+}
+
+.header a {
+  float: left;
+  color: black;
+  text-align: center;
+  padding: 10px;
+  text-decoration: none;
+  font-size: 15px; 
+  line-height: 10px;
+  border-radius: 10px;
+  
+}
+a:link, a:visited {
+  background-color: #7393B3;
+  color: black;
+  border: 2px solid #7393B3;
+  padding: 15px 3px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+}
+
+a:hover, a:active {
+  background-color: #7ADBD3;
+  color: white;
+}
+
+
+.header-right {
+  float: right;
+  cursor: pointer;
+}
+a{margin-right: 4px;}
+
 </style>
 </head>
-<body style="margin:0; padding:0; font-family:Arial;background-color:white;">
-    <div class="top">
-			<div class="navbar">
-			    <div class="nav-logo" style="margin-left: 10%; margin-top: 1%;">
-		          
-			    </div>
-				
-				<a href="HOMEPAGE COM.jsp"><img style="margin-left: -100px;" src="img/logout.png"></a>
-			</div>
+<body style="margin:0; padding:0; font-family:Arial;background-color:#7393B3;">
+   
+<div class="header">
+
+  <div class="header-right">
+  <a href="HOMEPAGE PAT.jsp">HOME</a>
+   <a href="Pat Profile.jsp">PROFILE</a>
+    <a href="login patrolman.jsp">LOGOUT</a>
+  </div>
+</div>
 			
 			<div class="center">
 	
@@ -146,32 +171,27 @@ form .btn:hover button{
   <div class="row">
     <div class="col-12">
       <table class="table table-bordered">
-       <h2>VIEW PATROLMAN</h2>
+       <h2>PATROLMAN SCHEDULE</h2>
 
 <table>
   <tr>
      <th>Patrolman ID</th>
-	<th>Resident ID</th>
-    <th>Username</th>
-    <th>Password</th>
-    <th>Action</th>
+	<th>Username</th>
+    <th>Schedule ID</th>
+    <th>Time</th>
+	<th>Date</th>
+	<th>Location</th>
+	<th>Tools</th>
 	   
   </tr>
-  
-  <c:forEach items="${patrolmans} var="patrolman">
-  <tr>
-  		<td><c:out value="${patrolman.patrolmanId}" /></td>
-  		<td><c:out value="${patrolman.residentId}" /></td>
-  		<td><c:out value="${patrolman.patrolmanUsername}" /></td>
-  		<td><c:out value="${patrolman.patrolmanPassword}" /></td>  		
-    	 <td><a href="viewPatrolman?action=view&patrolmanId=<c:out value="${patrolman.patrolmanId}"/> class="button">View</a></td>
-</c:forEach>
   <tr>
     <td>-</td>
     <td>-</td>
     <td>-</td>
 	 <td>-</td>
-	 <td><a href="comm viewPatProfile.jsp" class="button button1"><b>VIEW </b></a></td>
+	 <td>-</td>
+	  <td>-</td>
+	 <td><a href="viewDetailSchedule.jsp" class="button button1"><b>VIEW </b></a></td>
   </tr>
   
   <tr>
@@ -179,11 +199,14 @@ form .btn:hover button{
     <td>-</td>
     <td>-</td>
 	 <td>-</td>
-	 <td><a href="comm viewPatProfile.jsp" class="button button1"><b>VIEW </b></a></td>
+	 <td>-</td> 
+	  <td>-</td>
+	 <td><a href="viewDetailSchedule.jsp" class="button button1"><b>VIEW </b></a></td>
   </tr>
  
 </table>
 </div>
 	</div>
+
 </body>
 </html>

@@ -1,6 +1,6 @@
 package patrol.controller;
 
-import jakarta.servlet.RequestDispatcher; 
+import jakarta.servlet.RequestDispatcher;  
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
@@ -12,7 +12,7 @@ import patrol.model.Patrolman;
 import patrol.dao.PatrolmanDAO;
 
 import java.io.IOException;
-
+ 
 /**
  * Servlet implementation class viewSchedule
  */

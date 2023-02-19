@@ -164,7 +164,7 @@ a:hover, a:active {
 			        <b href="PSchedule.html"><img class="card-img" src="img/calander img.png" alt="SCHEDULE" /></b>
 		            <h3>SCHEDULE</h3>
 		
-				<a href="viewSchedule.jsp" target="_blank">View Schedule</a>
+				<a href="res viewSchedule.jsp" target="_blank">View Schedule</a>
 				<hr>.</hr>
 				
 				

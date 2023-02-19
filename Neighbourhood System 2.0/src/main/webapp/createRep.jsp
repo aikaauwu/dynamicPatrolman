@@ -34,7 +34,7 @@
 .container{
   background: #fff;
   width: 470px;
-  height: 550px;
+  height: 450px;
   padding: 30px;
   position: absolute;
   top: 10%;
@@ -43,7 +43,6 @@
   margin-left: 500px;
   margin-top: 50px;
 }
-
 .container .text{
   font-size: 35px;
   font-weight: 600;
@@ -138,49 +137,38 @@ a {text-decoration:none;}
 <body style="margin:0; padding:0; font-family:Arial;background-color:#6667AB;">
     <div class="top">
 			<div class="navbar">
-			    <div class="nav-logo" style="margin-left: 10%; margin-top: 1%;">
-		          
+			    <div class="nav-logo" style="margin-left: 10%; margin-top: 1%;"> 
 			    </div>
-				
-				<a href="HOMEPAGE COM.jsp"><img style="margin-left: -100px;" src="img/logout.png"></a>
 			</div>
 	<div class="center">
 	
          <div class="container">
-	      <a href="HOMEPAGE COM.jsp"><img src="img/close.png"></a>
+	      <a href="HOMEPAGE PAT.jsp"><img src="img/close.png"></a>
 		 
-            <div class="text"><b>CREATE PATROLMAN</b></div>
-			<div id="frmRegistration">
-            <form action="CreatePatrolmanServlet">
-			<div class="hero">
+            <div class="text"><b>CREATE REPORT</b></div>
 			
-			<form action="CreatePatrolmanServlet" method="post">
+			<form action="/action_page.php" method="post">
   <div class="imgcontainer">
   </div>
 
 
 			<div class="data">
                   <label>Patrolman ID:</label> 
-                  <input type="text" name = "patrolmanId" required>			  
+                  <input type="text" required>			  
                </div>
 			
                <div class="data">
-                  <label>Resident ID:</label> 	
-                  <input type="text" name = "residentId" required>				  
+                  <label>Username:</label> 	
+                  <input type="text" required>				  
                </div>
 			   
                <div class="data">
-                  <label>Username:</label>  
-                  <input type="text" name = "patrolmanUsername" required> 					
-               </div>
-               
-			   <div class="data">
-                  <label>Password:</label>    
-					<input type="password" name = "patrolmanPassword" required>
+                  <label>Report Description:</label>  
+                  <input type="text" required> 					
                </div>
 			  
                <div class="btn">
-                 <button type="submit" ><b>SUBMIT</b></button>
+                 <button type="submit"><b>SUBMIT</b></button>
                </div>
                
                <div class="btn">
