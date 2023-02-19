@@ -102,7 +102,7 @@ form .btn:hover button{
 
 
 .btn-group button {
-  background-color: #728FCE; /* Green yaoyao background */
+  background-color: #728FCE; /* Green background */
   border: 1px solid white; /* Green yaoyao border */
   color: white; /* White text */
   padding: 10px 24px; /* Some padding */

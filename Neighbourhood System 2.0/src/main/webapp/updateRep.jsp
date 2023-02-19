@@ -169,7 +169,6 @@ a {text-decoration:none;}
                  <button type="submit"><b>SUBMIT</b></button>
                </div>
                
-			   
             </form>
 			</div>
          </div>

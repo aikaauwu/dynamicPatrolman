@@ -143,7 +143,6 @@ a:hover, a:active {
   color: white;
 }
 
-
 .header-right {
   float: right;
   cursor: pointer;

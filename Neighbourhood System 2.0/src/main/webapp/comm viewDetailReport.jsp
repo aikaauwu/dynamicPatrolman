@@ -139,8 +139,8 @@ a {text-decoration:none;}
 			
 			<div class="data">
                   <label>Date:</label>  				
-               </div>
-			
+             </div>
+
             </form>
             
             </div>
