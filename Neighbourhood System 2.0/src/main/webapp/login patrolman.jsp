@@ -130,10 +130,10 @@ a {text-decoration:none;}
 		 
             <div class="text"><b>Patrolman Login</b></div>
 			<div id="frmRegistration">
-            <form action="login_code.php">
+            <form action="LoginPatrolmanServlet">
 			<div class="hero">
 			
-			<form action="/action_page.php" method="post">
+			<form name="form" action="LoginPatrolmanServlet" method="post" onsubmit="return validate()">
   <div class="imgcontainer">
     <img src="img/patrolman.png" alt="Avatar" class="avatar">
   </div>
@@ -150,14 +150,14 @@ a {text-decoration:none;}
 			
                <div class="data">
                   <label>Username</label>
-                  <input type="text" id ="username" required>
+                  <input type="text" id ="patrolmanUsername" name = "patrolmanUsername" >
                </div>
                <div class="data">
                   <label>Password</label>
-                  <input type="password" id="password" required>
+                  <input type="password" id="patrolmanPassword" name = "patrolmanPassword" >
                </div>
                <div class="btn">
-                  <button type="submit" formaction="HOMEPAGE PAT.jsp"><b>login</b></button>
+                  <button type="submit"><b>login</b></button>
                </div>
              
 			   

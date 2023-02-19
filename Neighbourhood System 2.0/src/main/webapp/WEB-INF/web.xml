@@ -43,5 +43,15 @@
     <url-pattern>/LoginCommitteeServlet</url-pattern>
   </servlet-mapping>
   
+  <servlet>
+    <description></description>
+    <display-name>LoginPatrolmanServlet</display-name>
+    <servlet-name>LoginPatrolmanServlet</servlet-name>
+    <servlet-class>patrol.controller.LoginPatrolmanServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>LoginPatrolmanServlet</servlet-name>
+    <url-pattern>/LoginPatrolmanServlet</url-pattern>
+  </servlet-mapping>
   
 </web-app>
