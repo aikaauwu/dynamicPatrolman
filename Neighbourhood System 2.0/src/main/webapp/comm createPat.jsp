@@ -147,36 +147,36 @@ a {text-decoration:none;}
 		 
             <div class="text"><b>CREATE PATROLMAN</b></div>
 			<div id="frmRegistration">
-            <form action="login_code.php">
+            <form action="CreatePatrolmanServlet">
 			<div class="hero">
 			
-			<form action="/action_page.php" method="post">
+			<form action="CreatePatrolmanServlet" method="post">
   <div class="imgcontainer">
   </div>
 
 
 			<div class="data">
                   <label>Patrolman ID:</label> 
-                  <input type="text" required>			  
+                  <input type="text" name = "patrolmanId" required>			  
                </div>
 			
                <div class="data">
                   <label>Resident ID:</label> 	
-                  <input type="text" required>				  
+                  <input type="text" name = "residentId" required>				  
                </div>
 			   
                <div class="data">
                   <label>Username:</label>  
-                  <input type="text" required> 					
+                  <input type="text" name = "patrolmanUsername" required> 					
                </div>
                
 			   <div class="data">
                   <label>Password:</label>    
-					<input type="password" required>
+					<input type="password" name = "patrolmanPassword" required>
                </div>
 			  
                <div class="btn">
-                 <button type="submit" formaction="comm ViewPat.jsp"><b>SUBMIT</b></button>
+                 <button type="submit" ><b>SUBMIT</b></button>
                </div>
                
                <div class="btn">

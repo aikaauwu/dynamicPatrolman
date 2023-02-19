@@ -9,8 +9,7 @@
     <welcome-file>default.jsp</welcome-file>
     <welcome-file>default.htm</welcome-file>
   </welcome-file-list>
-  
- <servlet>
+  <servlet>
     <description></description>
     <display-name>LoginResidentServlet</display-name>
     <servlet-name>LoginResidentServlet</servlet-name>
@@ -20,7 +19,6 @@
     <servlet-name>LoginResidentServlet</servlet-name>
     <url-pattern>/LoginResidentServlet</url-pattern>
   </servlet-mapping>
-  
   <servlet>
     <description></description>
     <display-name>CreateResidentServlet</display-name>
@@ -31,8 +29,7 @@
     <servlet-name>CreateResidentServlet</servlet-name>
     <url-pattern>/CreateResidentServlet</url-pattern>
   </servlet-mapping>
-  
-   <servlet>
+  <servlet>
     <description></description>
     <display-name>LoginCommitteeServlet</display-name>
     <servlet-name>LoginCommitteeServlet</servlet-name>
@@ -42,7 +39,6 @@
     <servlet-name>LoginCommitteeServlet</servlet-name>
     <url-pattern>/LoginCommitteeServlet</url-pattern>
   </servlet-mapping>
-  
   <servlet>
     <description></description>
     <display-name>LoginPatrolmanServlet</display-name>
@@ -54,4 +50,16 @@
     <url-pattern>/LoginPatrolmanServlet</url-pattern>
   </servlet-mapping>
   
+    <servlet>
+    <description></description>
+    <display-name>CreatePatrolmanServlet</display-name>
+    <servlet-name>CreatePatrolmanServlet</servlet-name>
+    <servlet-class>patrol.controller.CreatePatrolmanServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>CreatePatrolmanServlet</servlet-name>
+    <url-pattern>/CreatePatrolmanServlet</url-pattern>
+  </servlet-mapping>
+  
+
 </web-app>
