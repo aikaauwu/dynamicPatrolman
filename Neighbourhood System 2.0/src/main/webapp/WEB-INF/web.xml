@@ -49,8 +49,7 @@
     <servlet-name>LoginPatrolmanServlet</servlet-name>
     <url-pattern>/LoginPatrolmanServlet</url-pattern>
   </servlet-mapping>
-  
-    <servlet>
+  <servlet>
     <description></description>
     <display-name>CreatePatrolmanServlet</display-name>
     <servlet-name>CreatePatrolmanServlet</servlet-name>
@@ -60,6 +59,34 @@
     <servlet-name>CreatePatrolmanServlet</servlet-name>
     <url-pattern>/CreatePatrolmanServlet</url-pattern>
   </servlet-mapping>
-  
-
+  <servlet>
+    <description></description>
+    <display-name>Location</display-name>
+    <servlet-name>Location</servlet-name>
+    <servlet-class>patrol.model.Location</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>Location</servlet-name>
+    <url-pattern>/Location</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>locationDAO</display-name>
+    <servlet-name>locationDAO</servlet-name>
+    <servlet-class>patrol.dao.locationDAO</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>locationDAO</servlet-name>
+    <url-pattern>/locationDAO</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>viewLocation</display-name>
+    <servlet-name>viewLocation</servlet-name>
+    <servlet-class>patrol.controller.viewLocation</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>viewLocation</servlet-name>
+    <url-pattern>/viewLocation</url-pattern>
+  </servlet-mapping>
 </web-app>
