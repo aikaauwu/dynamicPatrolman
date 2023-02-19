@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="https://jakarta.ee/xml/ns/jakartaee" xmlns:web="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="https://jakarta.ee/xml/ns/jakartaee https://jakarta.ee/xml/ns/jakartaee/web-app_5_0.xsd http://xmlns.jcp.org/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" id="WebApp_ID" version="5.0">
-  <display-name>Neighbourhood System</display-name>
+  <display-name>MyBaju</display-name>
   <welcome-file-list>
     <welcome-file>index.html</welcome-file>
     <welcome-file>index.jsp</welcome-file>
@@ -11,55 +11,112 @@
   </welcome-file-list>
   <servlet>
     <description></description>
-    <display-name>LoginResidentServlet</display-name>
-    <servlet-name>LoginResidentServlet</servlet-name>
-    <servlet-class>patrol.controller.LoginResidentServlet</servlet-class>
+    <display-name>OrderController</display-name>
+    <servlet-name>OrderController</servlet-name>
+    <servlet-class>mybaju.controller.OrderController</servlet-class>
   </servlet>
   <servlet-mapping>
-    <servlet-name>LoginResidentServlet</servlet-name>
-    <url-pattern>/LoginResidentServlet</url-pattern>
+    <servlet-name>OrderController</servlet-name>
+    <url-pattern>/OrderController</url-pattern>
   </servlet-mapping>
   <servlet>
     <description></description>
-    <display-name>CreateResidentServlet</display-name>
-    <servlet-name>CreateResidentServlet</servlet-name>
-    <servlet-class>patrol.controller.CreateResidentServlet</servlet-class>
+    <display-name>LoginServlet</display-name>
+    <servlet-name>LoginServlet</servlet-name>
+    <servlet-class>mybaju.controller.LoginServlet</servlet-class>
   </servlet>
   <servlet-mapping>
-    <servlet-name>CreateResidentServlet</servlet-name>
-    <url-pattern>/CreateResidentServlet</url-pattern>
+    <servlet-name>LoginServlet</servlet-name>
+    <url-pattern>/LoginServlet</url-pattern>
   </servlet-mapping>
   <servlet>
     <description></description>
-    <display-name>LoginCommitteeServlet</display-name>
-    <servlet-name>LoginCommitteeServlet</servlet-name>
-    <servlet-class>patrol.controller.LoginCommitteeServlet</servlet-class>
+    <display-name>LoginStudentServlet</display-name>
+    <servlet-name>LoginStudentServlet</servlet-name>
+    <servlet-class>mybaju.controller.LoginStudentServlet</servlet-class>
   </servlet>
   <servlet-mapping>
-    <servlet-name>LoginCommitteeServlet</servlet-name>
-    <url-pattern>/LoginCommitteeServlet</url-pattern>
+    <servlet-name>LoginStudentServlet</servlet-name>
+    <url-pattern>/LoginStudentServlet</url-pattern>
   </servlet-mapping>
   <servlet>
     <description></description>
-    <display-name>LoginPatrolmanServlet</display-name>
-    <servlet-name>LoginPatrolmanServlet</servlet-name>
-    <servlet-class>patrol.controller.LoginPatrolmanServlet</servlet-class>
+    <display-name>LogoutServlet</display-name>
+    <servlet-name>LogoutServlet</servlet-name>
+    <servlet-class>mybaju.controller.LogoutServlet</servlet-class>
   </servlet>
   <servlet-mapping>
-    <servlet-name>LoginPatrolmanServlet</servlet-name>
-    <url-pattern>/LoginPatrolmanServlet</url-pattern>
+    <servlet-name>LogoutServlet</servlet-name>
+    <url-pattern>/LogoutServlet</url-pattern>
   </servlet-mapping>
-  
-    <servlet>
+  <servlet>
     <description></description>
-    <display-name>CreatePatrolmanServlet</display-name>
-    <servlet-name>CreatePatrolmanServlet</servlet-name>
-    <servlet-class>patrol.controller.CreatePatrolmanServlet</servlet-class>
+    <display-name>test</display-name>
+    <servlet-name>test</servlet-name>
+    <servlet-class>mybaju.controller.test</servlet-class>
   </servlet>
   <servlet-mapping>
-    <servlet-name>CreatePatrolmanServlet</servlet-name>
-    <url-pattern>/CreatePatrolmanServlet</url-pattern>
+    <servlet-name>test</servlet-name>
+    <url-pattern>/test</url-pattern>
   </servlet-mapping>
-  
-
+  <servlet>
+    <description></description>
+    <display-name>LoginWardenServlet</display-name>
+    <servlet-name>LoginWardenServlet</servlet-name>
+    <servlet-class>mybaju.controller.LoginWardenServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>LoginWardenServlet</servlet-name>
+    <url-pattern>/LoginWardenServlet</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>LogoutWardenServlet</display-name>
+    <servlet-name>LogoutWardenServlet</servlet-name>
+    <servlet-class>mybaju.controller.LogoutWardenServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>LogoutWardenServlet</servlet-name>
+    <url-pattern>/LogoutWardenServlet</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>LogoutStudentServlet</display-name>
+    <servlet-name>LogoutStudentServlet</servlet-name>
+    <servlet-class>mybaju.controller.LogoutStudentServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>LogoutStudentServlet</servlet-name>
+    <url-pattern>/LogoutStudentServlet</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>ListFeesController</display-name>
+    <servlet-name>ListFeesController</servlet-name>
+    <servlet-class>mybaju.controller.ListFeesController</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ListFeesController</servlet-name>
+    <url-pattern>/ListFeesController</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>ListFeesControllerr</display-name>
+    <servlet-name>ListFeesControllerr</servlet-name>
+    <servlet-class>mybaju.controller.ListFeesController</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ListFeesControllerr</servlet-name>
+    <url-pattern>/ListFeesControllerr</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>FeeList</display-name>
+    <servlet-name>FeeList</servlet-name>
+    <servlet-class>mybaju.controller.FeeList</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>FeeList</servlet-name>
+    <url-pattern>/FeeList</url-pattern>
+  </servlet-mapping>
 </web-app>
