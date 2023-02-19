@@ -125,7 +125,8 @@ a {text-decoration:none;}
 
 
 			<div class="data">
-                  <label>Patrolman ID:</label> 			  
+                  <label>Patrolman ID:</label>
+                  <input type="text" required> 			  
                </div>
 			
                <div class="data">
@@ -134,7 +135,8 @@ a {text-decoration:none;}
                </div>
 			   
                <div class="data">
-                  <label>Schedule ID:</label>   					
+                  <label>Schedule ID:</label> 
+                  <input type="text" required>  					
                </div>
 			   <div class="data">
                   <label>Time:</label>    
@@ -145,8 +147,10 @@ a {text-decoration:none;}
 					<input type="date" required>
                </div>
 			  
+			  
+			  
                <div class="btn">
-                 <button type="submit" formaction="comm ViewCreateSchedule.jsp"><b>DONE</b></button>
+                 <button type="submit" formaction="viewSchedule.jsp"><b>DONE</b></button>
                </div>
 			   
 			   

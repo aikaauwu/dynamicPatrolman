@@ -156,6 +156,15 @@ form .btn:hover button{
     <th>Password</th>
 	   
   </tr>
+  
+  <c:forEach items="${patrolmans} var="patrolman">
+  <tr>
+  		<td><c:out value="${patrolman.patrolmanId}" /></td>
+  		<td><c:out value="${patrolman.residentId}" /></td>
+  		<td><c:out value="${patrolman.patrolmanUsername}" /></td>
+  		<td><c:out value="${patrolman.patrolmanPassword}" /></td>  		
+    	 <td><a href="viewPatrolman?action=view&patrolmanId=<c:out value="${patrolman.patrolmanId}"/> class="button">View</a></td>
+</c:forEach>
   <tr>
     <td>-</td>
     <td>-</td>

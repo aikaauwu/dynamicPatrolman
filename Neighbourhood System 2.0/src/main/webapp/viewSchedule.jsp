@@ -155,9 +155,17 @@ form .btn:hover button{
     <th>Schedule ID</th>
     <th>Time</th>
 	<th>Date</th>
-	<th>Tools</th>
-	   
+	<th>Tools</th>	   
   </tr>
+  
+    <c:forEach items="${schedules} var="schedule">
+  <tr>
+  		<td><c:out value="${schedule.patrolId}" /></td>
+  		<td><c:out value="${schedule.patrolmanUsername}" /></td>
+  		<td><c:out value="${schedule.scheduleId}" /></td>
+  		<td><c:out value="${schedule.scheduleTime}" /></td>
+</c:forEach>
+  
   <tr>
     <td>-</td>
     <td>-</td>
@@ -173,7 +181,7 @@ form .btn:hover button{
     <td>-</td>
 	 <td>-</td>
 	 <td>-</td> 
-	 <td><a href="viewDetailSchedule.jsp" class="button button1"><b>CREATE </b></a></td>
+	 <td><a href="comm CreateSchedule.jsp" class="button button1"><b>CREATE </b></a></td>
   </tr>
  
 </table>
