@@ -178,8 +178,7 @@ a {text-decoration:none;}
                
                <div class="btn">
                	 <button type="reset"> <b>CLEAR</b></button>
-               </div>
-			   
+               </div>	   
             </form>
 			</div>
          </div>

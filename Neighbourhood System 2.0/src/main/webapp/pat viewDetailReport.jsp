@@ -71,8 +71,6 @@ form .btn:hover button{
     background-color: #94948F;
 	border: 2px solid white;
 
-
-
 .btn-group button {
   background-color: #728FCE; /* Green yaoyao background */
   border: 1px solid white; /* Green border */

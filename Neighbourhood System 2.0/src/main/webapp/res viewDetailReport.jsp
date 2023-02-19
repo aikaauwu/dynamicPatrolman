@@ -91,7 +91,6 @@ form .btn:hover button{
 }
 
 
-
 /* Add a background color on hover */
 .btn-group button:hover {
   background-color: #D5D6EA;

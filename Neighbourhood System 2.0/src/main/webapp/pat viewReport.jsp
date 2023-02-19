@@ -100,7 +100,6 @@ form .btn:hover button{
 	border: 2px solid white;
 }
 
-
 .btn-group button {
   background-color: #728FCE; /* Green background */
   border: 1px solid white; /* Green yaoyao border */
