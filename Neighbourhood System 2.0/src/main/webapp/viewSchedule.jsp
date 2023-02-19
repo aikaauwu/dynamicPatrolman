@@ -119,7 +119,7 @@ form .btn:hover button{
 .btn-group button {
   background-color: #728FCE; /* Green background */
   border: 1px solid white; /* Green border ajax */
-  color: white; /* White text */
+  color: white; /* White text ajax */
   padding: 10px 24px; /* Some padding */
   cursor: pointer; /* Pointer/hand icon */
   float: left; /* Float the buttons side by side */
