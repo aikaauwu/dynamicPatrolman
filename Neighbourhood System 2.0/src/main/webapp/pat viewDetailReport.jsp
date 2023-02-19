@@ -112,9 +112,9 @@ a {text-decoration:none;}
     <div class="center">
 	
          <div class="container">
-	      <a href="pat viewSchedule.jsp"><img src="img/close.png"></a>
+	      <a href="pat viewReport.jsp"><img src="img/close.png"></a>
 		 
-            <div class="text"><b>Location Detail</b></div>
+            <div class="text"><b>Report Detail</b></div>
 			<div id="frmRegistration">
             <form>
 			<div class="hero">
@@ -126,15 +126,19 @@ a {text-decoration:none;}
 			
 		 	
 				<div class="data">
-                  <label> Location ID:</label> 		  
+                  <label>Report ID:</label> 		  
                </div>
 			
                <div class="data">
-                  <label>Location Area:</label> 				  
+                  <label>Patrolman ID:</label> 				  
                </div>
 			   
                <div class="data">
-                  <label>Location Address:</label>  				
+                  <label>Report Description:</label>  				
+               </div>
+			
+			<div class="data">
+                  <label>Date:</label>  				
                </div>
 			
             </form>

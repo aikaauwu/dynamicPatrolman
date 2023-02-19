@@ -180,6 +180,7 @@ a{margin-right: 4px;}
     <th>Report Description</th>
     <th>Date</th>
     <th>Action</th>
+    <th>Update</th>
 	   
   </tr>
   <tr>
@@ -187,6 +188,7 @@ a{margin-right: 4px;}
     <td>-</td>
     <td>-</td>
 	 <td>-</td>
+	 <td><a href="pat viewDetailReport.jsp" class="button button1"><b>VIEW </b></a></td>
 	 <td><a href="updateRep.jsp" class="button button1"><b>UPDATE </b></a></td>
 	 </tr>
   
@@ -195,6 +197,7 @@ a{margin-right: 4px;}
     <td>-</td>
     <td>-</td>
 	 <td>-</td>
+	 <td><a href="pat viewDetailReport.jsp" class="button button1"><b>VIEW </b></a></td>
 	 <td><a href="updateRep.jsp" class="button button1"><b>UPDATE </b></a></td>
 	  </tr>
  

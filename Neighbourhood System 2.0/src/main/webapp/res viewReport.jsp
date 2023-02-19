@@ -179,6 +179,7 @@ a{margin-right: 4px;}
 	<th>Patrolman ID</th>
     <th>Report Description</th>
     <th>Date</th>
+    <th>Action</th>
 	   
   </tr>
   <tr>
@@ -186,6 +187,7 @@ a{margin-right: 4px;}
     <td>-</td>
     <td>-</td>
 	 <td>-</td>
+	 <td><a href="res viewDetailReport.jsp" class="button button1"><b>VIEW </b></a></td>
 	 </tr>
   
   <tr>
@@ -193,6 +195,7 @@ a{margin-right: 4px;}
     <td>-</td>
     <td>-</td>
 	 <td>-</td>
+	 <td><a href="res viewDetailReport.jsp" class="button button1"><b>VIEW </b></a></td>
 	  </tr>
  
 </table>
