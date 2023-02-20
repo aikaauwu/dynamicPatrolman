@@ -13,31 +13,16 @@
 	
 }
 
-.navbar{
-	width: 100%;
-	margin: auto;
-	display: flex;
-	align-items: center;
-	justify-content: space-between;	
-	background-color: #A1B1F8;
-	margin-top:-10px;
-	height: 80px;
-	
-    
-}
-.nav-logo img{
-	width: 200px;
-	cursor: pointer;
-   
-}
 .content img{
     margin-left: 200;
 	margin-top: 100px;
 	
 }
 .container{
-  background: #A1B1F8;
-  width: 1325px;
+  background: #C5DEDC;
+  position: absolute;
+  top: 3%;
+  width: 1185px;
   height: 500px;
   padding: 30px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
@@ -117,26 +102,64 @@ form .btn:hover button{
 
 
 .btn-group button {
-  background-color: #728FCE; /* Green background */
-  border: 1px solid white; /* Green border ajax */
-  color: white; /* White text ajax */
+  background-color: #728FCE; /* Green yaoyao background */
+  border: 1px solid white; /* Green yaoyao border */
+  color: white; /* White text */
   padding: 10px 24px; /* Some padding */
   cursor: pointer; /* Pointer/hand icon */
   float: left; /* Float the buttons side by side */
 
 }
 
+.header {
+  overflow: hidden;
+  background-color: #7393B3;
+  padding: 20px 10px;
+}
+
+.header a {
+  float: left;
+  color: black;
+  text-align: center;
+  padding: 10px;
+  text-decoration: none;
+  font-size: 15px; 
+  line-height: 10px;
+  border-radius: 10px;
+  
+}
+a:link, a:visited {
+  background-color: #7393B3;
+  color: black;
+  border: 2px solid #7393B3;
+  padding: 15px 3px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+}
+
+a:hover, a:active {
+  background-color: #7ADBD3;
+  color: white;
+}
+
+.header-right {
+  float: right;
+  cursor: pointer;
+}
+a{margin-right: 4px;}
+
 </style>
 </head>
-<body style="margin:0; padding:0; font-family:Arial;background-color:white;">
-    <div class="top">
-			<div class="navbar">
-			    <div class="nav-logo" style="margin-left: 10%; margin-top: 1%;">
-		          
-			    </div>
-				
-				
-			</div>
+<body style="margin:0; padding:0; font-family:Arial;background-color:#7393B3;">
+   
+<div class="header">
+
+  <div class="header-right">
+  <a href="HOMEPAGE COM.jsp">HOME</a>
+    <a href="login comm.jsp">LOGOUT</a>
+  </div>
+</div>
 			
 			<div class="center">
 	
@@ -146,46 +169,37 @@ form .btn:hover button{
   <div class="row">
     <div class="col-12">
       <table class="table table-bordered">
-       <h2>VIEW SCHEDULE</h2>
+       <h2>VIEW REPORT</h2>
 
 <table>
   <tr>
-     <th>Patrolman ID</th>
-	<th>Username</th>
-    <th>Schedule ID</th>
-    <th>Time</th>
-	<th>Date</th>
-	<th>Tools</th>	   
+     <th>Report ID</th>
+	<th>Patrolman ID</th>
+    <th>Report Description</th>
+    <th>Date</th>
+    <th>Action</th>
+	   
   </tr>
-  
-    <c:forEach items="${schedules} var="schedule">
-  <tr>
-  		<td><c:out value="${schedule.patrolId}" /></td>
-  		<td><c:out value="${schedule.patrolmanUsername}" /></td>
-  		<td><c:out value="${schedule.scheduleId}" /></td>
-  		<td><c:out value="${schedule.scheduleTime}" /></td>
-</c:forEach>
-  
   <tr>
     <td>-</td>
     <td>-</td>
     <td>-</td>
 	 <td>-</td>
-	 <td>-</td>
-	 <td><a href="viewDetailSchedule.jsp" class="button button1"><b>VIEW </b></a></td>
-  </tr>
+	 <td><a href="comm viewDetailReport.jsp" class="button button1"><b>VIEW </b></a></td>
+	 </tr>
   
   <tr>
     <td>-</td>
     <td>-</td>
     <td>-</td>
 	 <td>-</td>
-	 <td>-</td> 
-	 <td><a href="viewDetailSchedule.jsp" class="button button1"><b>VIEW</b></a></td>
+	 <td><a href="comm viewDetailReport.jsp" class="button button1"><b>VIEW </b></a></td>
+	  </tr>
  
 </table>
 </div>
 	</div>
+
 
 </body>
 </html>

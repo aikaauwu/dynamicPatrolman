@@ -130,10 +130,9 @@ a {text-decoration:none;}
 		 
             <div class="text"><b>Patrolman Login</b></div>
 			<div id="frmRegistration">
-            <form action="LoginPatrolmanServlet">
 			<div class="hero">
 			
-			<form name="form" action="LoginPatrolmanServlet" method="post" onsubmit="return validate()">
+			
   <div class="imgcontainer">
     <img src="img/patrolman.png" alt="Avatar" class="avatar">
   </div>
@@ -146,7 +145,7 @@ a {text-decoration:none;}
   <button style="width:33.3%"><a href="login comm.jsp">COMMITTEE</button></a>
 </div>
 
-		 
+		 <form name="form" action="LoginPatrolmanServlet" method="post" onsubmit="return validate()">
 			
                <div class="data">
                   <label>Username</label>

@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
+    <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -150,8 +151,11 @@ a:hover, a:active {
 <div class="header">
 
   <div class="header-right">
-    <a href="Res Profile.jsp">PROFILE</a>
-    <a href="login res.jsp">LOGOUT</a>
+  Welcome, <%=request.getAttribute("residentUsername") %> 
+    <a href="ResidentViewProfileServlet?residentUsername=<%=request.getAttribute("residentUsername") %> ">PROFILE</a>
+    <a href="index.jsp">LOGOUT</a>
+    
+  
 
   </div>
 </div>
@@ -164,7 +168,7 @@ a:hover, a:active {
 			        <b href="PSchedule.html"><img class="card-img" src="img/calander img.png" alt="SCHEDULE" /></b>
 		            <h3>SCHEDULE</h3>
 		
-				<a href="viewSchedule.jsp" target="_blank">View Schedule</a>
+				<a href="res viewSchedule.jsp" target="_blank">View Schedule</a>
 				<hr>.</hr>
 				
 				
@@ -175,8 +179,7 @@ a:hover, a:active {
 			        <b href="PReport.html"><img class="card-img" src="img/report p.png" alt="REPORT" /></b>
 			        <h3>REPORT</h3>
 				
-				
-					<a href="viewRep.jsp" target="_blank">View Report</a>
+					<a href="res viewReport.jsp" target="_blank">View Report</a>
 					<hr>.</hr>
 				
 		        </div>

@@ -1,29 +1,30 @@
 package patrol.controller;
 
-import jakarta.servlet.RequestDispatcher; 
+import java.io.IOException;
+
+
+import jakarta.servlet.RequestDispatcher;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 
-import patrol.model.scheduleModel;
-import patrol.dao.scheduleDao;
-import java.io.IOException;
+import patrol.dao.ResidentDAO;
 
 /**
- * Servlet implementation class viewSchedule
+ * Servlet implementation class ViewShawlController
  */
-public class viewSchedule extends HttpServlet {
+@WebServlet("/ResViewProfileController")
+public class ResidentViewProfileServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-	private scheduleDao dao;
-       
+	private ResidentDAO dao;       
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public viewSchedule() {
+    public ResidentViewProfileServlet() {
         super();
-        dao = new scheduleDao();
+        dao = new ResidentDAO();
         // TODO Auto-generated constructor stub
     }
 
@@ -32,15 +33,11 @@ public class viewSchedule extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		String scheduleId = request.getParameter("scheduleId");
-		request.setAttribute("schedule",scheduleDao.getScheduleDetails());
-		RequestDispatcher view = request.getRequestDispatcher("viewSchedule.jsp"); //schedule page
+		String residentUsername = request.getParameter("residentUsername");
+		request.setAttribute("resident", ResidentDAO.getResidentProfile(residentUsername));
+		RequestDispatcher view = request.getRequestDispatcher("Res Profile.jsp");
 		view.forward(request, response);
 	}
 
-	/**
-	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
-	 */
-	
 
 }

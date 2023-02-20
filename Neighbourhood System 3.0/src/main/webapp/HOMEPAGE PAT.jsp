@@ -161,7 +161,7 @@ a{margin-right: 4px;}
 			        <b href=""><img class="card-img" src="img/calander img.png" alt="SCHEDULE" /></b>
 		            <h3>SCHEDULE</h3>
 		
-				<a href="viewSchedule.jsp" target="_blank">View Schedule</a>
+				<a href="pat viewSchedule.jsp" target="_blank">View Schedule</a>
 				<hr>.</hr>
 				
 				
@@ -174,7 +174,7 @@ a{margin-right: 4px;}
 				
 					<a href="createRep.jsp" target="_blank">Create Report</a>
 					<a href="updateRep.jsp" target="_blank">Update Report</a>
-					<a href="viewRep.jsp" target="_blank">View Report</a>
+					<a href="pat viewReport.jsp" target="_blank">View Report</a>
 					<hr>.</hr>
 				
 		        </div>

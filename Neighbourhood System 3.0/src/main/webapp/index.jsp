@@ -138,10 +138,9 @@ a {text-decoration:none;}
             <div class="text"><b>Zulsidents Login</b></div>
            
 				<div id="frmRegistration">
-           			 <form action="LoginResidentServlet">
 						<div class="hero">
 			
-		<form name="form" action="LoginResidentServlet" method="post" onsubmit="return validate()">
+		
   									<div class="imgcontainer">
     								<img src="img/residents.png" alt="Avatar" class="avatar">
  									 </div>
@@ -154,7 +153,7 @@ a {text-decoration:none;}
  					
 				</div>
 
-		 
+		 <form name="form" action="LoginResidentServlet" method="post" onsubmit="return validate()">
 			 
 			 
               	 <div class="data">
@@ -178,11 +177,7 @@ a {text-decoration:none;}
             </form>
                
              
-            
-       
-			  
-			   
-            </form>
+    
 			</div>
          </div>
       </div>

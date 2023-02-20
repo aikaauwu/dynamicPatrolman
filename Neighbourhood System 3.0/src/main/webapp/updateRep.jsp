@@ -5,11 +5,40 @@
 <head>
 <meta charset="ISO-8859-1">
 <style>
+.top{
+    border: none;
+    padding-top: 10px;
+    height: 10%;
+
+	
+}
+
+.navbar{
+	width: 100%;
+	margin: auto;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;	
+	background-color: #A1B1F8;
+	margin-top:-10px;
+	height: 80px;
+	
+    
+}
+.nav-logo img{
+	width: 200px;
+	cursor: pointer;
+   
+}
+
 .container{
-   background: #fff;
-  width: 410px;
-  height: 600px;
+  background: #fff;
+  width: 470px;
+  height: 450px;
   padding: 30px;
+  position: absolute;
+  top: 10%;
+  left: -10%;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   margin-left: 500px;
   margin-top: 50px;
@@ -46,56 +75,49 @@ form .data input:focus{
 }
 form .btn{
   margin: 30px 0;
-  height: 45px;
+  height: 15px;
   width: 100%;
   position: relative;
 }
 form .btn button{
     border: none;
 	border-radius:5px;
-	padding: 10px 165px;
+	height: 35px;
+  	width:50%;
 	position: absolute;
+  	left: 120px;
+ 	top: 20px;
 	text-align: center;
 	font-size:20px;
 	text-transform: uppercase;
 	transition-duration: 0.5s;
 	cursor: pointer;
-	background-color: 	#7393B3 ;
+	background-color: 	#FF1D39 ;
 	border: 2px solid #bfbfbf;
 	color: white;
-	letter-spacing: 3px;
+	letter-spacing: 3px; 
 	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 form .btn:hover button{
-    background-color: #89CFF0;
+    background-color: #94948F;
 	border: 2px solid white;
 
-}
-
-
 .btn-group button {
-  background-color: #728FCE; /* Green background */
-  border: 1px solid white; /* Green border */
-  color: white; /* White text */
-  padding: 10px 24px; /* Some padding */
-  cursor: pointer; /* Pointer/hand icon */
-  float: left; /* Float the buttons side by side */
-  text-decoration:none;
+  background-color: #728FCE; 
+  border: 1px solid white; 
+  color: white; 
+  padding: 10px 24px; 
+  cursor: pointer; 
+  float: left; 
+
 }
 
-/* Clear floats (clearfix hack) */
 .btn-group:after {
   content: "";
   clear: both;
   display: table;
 }
 
-.btn-group button:not(:last-child) {
-  border-right: none; /* Prevent double borders */
-  text-decoration:none;
-}
-
-/* Add a background color on hover */
 .btn-group button:hover {
   background-color: #D5D6EA;
 }
@@ -107,54 +129,50 @@ form .btn:hover button{
 img.avatar {
   width: 40%;
   border-radius: 50%;
-}
+
 a {text-decoration:none;}
+</style>
 
-</style></head>
+</head>
 <body style="margin:0; padding:0; font-family:Arial;background-color:#6667AB;">
-
-    <div class="center">
+    <div class="top">
+			<div class="navbar">
+			    <div class="nav-logo" style="margin-left: 10%; margin-top: 1%;"> 
+			    </div>
+			</div>
+	<div class="center">
 	
          <div class="container">
+	      <a href="pat viewReport.jsp"><img src="img/close.png"></a>
 		 
-		 
-            <div class="text"><b>Zulmittee Login</b></div>
-            
-			<div id="frmRegistration">
-				<div class="hero">
+            <div class="text"><b>UPDATE REPORT</b></div>
 			
-			
- 				 <div class="imgcontainer">
-   					 <img src="img/comm.png" alt="Avatar" class="avatar">
-  				 </div>
+			<form action="/action_page.php" method="post">
+  <div class="imgcontainer">
+  </div>
 
-				 <div class="btn-group"style="width:100%">
-				 
-				<button style="width:33.3%"><a href="index.jsp">RESIDENT</button></a>
- 				<button style="width:33.3%"><a href="login patrolman.jsp">PATROLMAN</button></a>
- 				<button style="width:33.3%"><a href="login comm.jsp">COMMITTEE</button></a>
-				</div>
 
-<form name="form" action="LoginCommitteeServlet" method="post" onsubmit="return validate()">
-		 
+			<div class="data">
+                  <label>Patrolman ID:</label> 	  
+               </div>
 			
                <div class="data">
-                  <label>Username</label>
-                  <input type="text" id ="username"  name="commUsername">
+                  <label>Username:</label> 				  
                </div>
-               <div class="data">
-                  <label>Password</label>
-                  <input type="password" id="password"  name="commPassword">
-               </div>
-               <div class="btn">
-                  <button type="submit" name=login><b>login</b></button>
-               </div>
-             
-			  
 			   
+               <div class="data">
+                  <label>Report Description:</label>  
+                  <input type="text" required> 					
+               </div>
+			  
+               <div class="btn">
+                 <button type="submit"><b>SUBMIT</b></button>
+               </div>
+               
             </form>
 			</div>
          </div>
       </div>
+			
 </body>
 </html>

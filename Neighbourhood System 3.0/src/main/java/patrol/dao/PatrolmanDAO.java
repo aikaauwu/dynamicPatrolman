@@ -136,7 +136,42 @@ public class PatrolmanDAO {
 	            return "Invalid user credentials"; // Return appropriate message in case of failure
 	        }
 	
-
+//complete getpatrolmanId() method
+	public static List<Patrolman> getPatrolmanDetails(){
+		List<Patrolman> patrolman = new ArrayList<Patrolman>();
+		try {
+			
+			//call getConnection() method
+			con = ConnectionManager.getConnection();
+			
+			//create statement
+			stmt = con.createStatement();
+			String sql = "SELECT * FROM patrolman ORDER BY patrolmanId";
+			
+			//execute query
+			rs = stmt.executeQuery(sql);
+			
+			while(rs.next()) {
+				Patrolman s = new Patrolman();
+				s.setPatrolmanId(rs.getString("patrolmanId"));
+				s.setResidentId(rs.getInt("residentId"));
+				s.setPatrolmanUsername(rs.getString("patrolmanUsername"));
+				s.setPatrolmanPassword(rs.getString("patrolmanPassword"));
+				
+				patrolman.add(s);
+			}
+			
+			//close connection
+			con.close();
+		}
+		catch (Exception e)
+		{
+			e.printStackTrace();
+		}
+		
+		return patrolman;
+		}
+	}
 	
 
-}
+

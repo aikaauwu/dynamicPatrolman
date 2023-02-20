@@ -114,41 +114,40 @@ a {text-decoration:none;}
          <div class="container">
 	      <a href="HOMEPAGE RESIDENTS.jsp"><img src="img/close.png"></a>
 		 
-            <div class="text"><b>Profile</b></div>
+            <div class="text"><b>Profilez</b></div>
 			<div id="frmRegistration">
-            <form action="login_code.php">
+           
 			<div class="hero">
 			
-			<form action="/action_page.php" method="post">
+			<form >
   <div class="imgcontainer">
   </div>
 
-
-		 
 				<div class="data">
-                  <label>Resident ID:</label>              
+                  <label>Resident ID: <c:out value="${resident.residentId}" /> </label>              
                </div>
                <div class="data">
-                  <label>Name:</label>              
+                  <label>Name: <c:out value="${resident.residentName}" /></label>              
                </div>
                <div class="data">
-                  <label>Phone Number:</label>      
+                  <label>Phone Number: <c:out value="${resident.residentPhoneNum}" /></label>      
                </div>
 			   <div class="data">
-                  <label>Address:</label>      
+                  <label>Address: <c:out value="${resident.residentAddress}" /></label>      
                </div>
 			   <div class="data">
-                  <label>Email:</label>      
+                  <label>Email: <c:out value="${resident.residentEmail}" /></label>      
                </div>
 			   <div class="data">
-                  <label>Username:</label>      
+                  <label>Username: <c:out value="${resident.residentUsername}" /></label>      
                </div>
 			   <div class="data">
-                  <label>Password:</label>      
+                  <label>Password: <c:out value="${resident.residentPassword}" /></label>      
                </div>
                <div class="btn">
-                 <button type="submit" formaction="R updateProdile.jsp"><b>UPDATE</b></button>
+                 <button type="submit" href="ResidentUpdateDetailServlet?residentId=<c:out value="${resident.residentId}"/>"><b>UPDATE</b></button>
                </div>
+			   
 			   
 			   
 			  

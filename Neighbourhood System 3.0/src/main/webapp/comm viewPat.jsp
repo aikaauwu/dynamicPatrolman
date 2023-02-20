@@ -154,6 +154,7 @@ form .btn:hover button{
 	<th>Resident ID</th>
     <th>Username</th>
     <th>Password</th>
+    <th>Action</th>
 	   
   </tr>
   
@@ -170,6 +171,7 @@ form .btn:hover button{
     <td>-</td>
     <td>-</td>
 	 <td>-</td>
+	 <td><a href="comm viewPatProfile.jsp" class="button button1"><b>VIEW </b></a></td>
   </tr>
   
   <tr>
@@ -177,6 +179,7 @@ form .btn:hover button{
     <td>-</td>
     <td>-</td>
 	 <td>-</td>
+	 <td><a href="comm viewPatProfile.jsp" class="button button1"><b>VIEW </b></a></td>
   </tr>
  
 </table>

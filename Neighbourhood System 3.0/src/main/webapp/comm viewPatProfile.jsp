@@ -1,14 +1,15 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
+    <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="ISO-8859-1">
 <style>
 .container{
-   background: #fff;
-  width: 410px;
-  height: 600px;
+  background: #fff;
+  width: 470px;
+  height: 750px;
   padding: 30px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   margin-left: 500px;
@@ -53,24 +54,23 @@ form .btn{
 form .btn button{
     border: none;
 	border-radius:5px;
-	padding: 10px 165px;
+	padding: 10px 175px;
 	position: absolute;
 	text-align: center;
 	font-size:20px;
 	text-transform: uppercase;
 	transition-duration: 0.5s;
 	cursor: pointer;
-	background-color: 	#7393B3 ;
+	background-color: 	#FF1D39 ;
 	border: 2px solid #bfbfbf;
 	color: white;
 	letter-spacing: 3px;
 	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 form .btn:hover button{
-    background-color: #89CFF0;
+    background-color: #94948F;
 	border: 2px solid white;
 
-}
 
 
 .btn-group button {
@@ -80,7 +80,7 @@ form .btn:hover button{
   padding: 10px 24px; /* Some padding */
   cursor: pointer; /* Pointer/hand icon */
   float: left; /* Float the buttons side by side */
-  text-decoration:none;
+
 }
 
 /* Clear floats (clearfix hack) */
@@ -90,10 +90,7 @@ form .btn:hover button{
   display: table;
 }
 
-.btn-group button:not(:last-child) {
-  border-right: none; /* Prevent double borders */
-  text-decoration:none;
-}
+
 
 /* Add a background color on hover */
 .btn-group button:hover {
@@ -107,52 +104,47 @@ form .btn:hover button{
 img.avatar {
   width: 40%;
   border-radius: 50%;
-}
-a {text-decoration:none;}
 
+a {text-decoration:none;}
 </style></head>
 <body style="margin:0; padding:0; font-family:Arial;background-color:#6667AB;">
 
     <div class="center">
 	
          <div class="container">
+	      <a href="HOMEPAGE COM.jsp"><img src="img/close.png"></a>
 		 
-		 
-            <div class="text"><b>Zulmittee Login</b></div>
-            
+            <div class="text"><b>Patrolman Profile</b></div>
 			<div id="frmRegistration">
-				<div class="hero">
+            <form>
+			<div class="hero">
 			
 			
- 				 <div class="imgcontainer">
-   					 <img src="img/comm.png" alt="Avatar" class="avatar">
-  				 </div>
-
-				 <div class="btn-group"style="width:100%">
-				 
-				<button style="width:33.3%"><a href="index.jsp">RESIDENT</button></a>
- 				<button style="width:33.3%"><a href="login patrolman.jsp">PATROLMAN</button></a>
- 				<button style="width:33.3%"><a href="login comm.jsp">COMMITTEE</button></a>
-				</div>
-
-<form name="form" action="LoginCommitteeServlet" method="post" onsubmit="return validate()">
-		 
+  					<div class="imgcontainer">
+  					</div>
+		
+			
+		 	
+				<div class="data">
+                  <label>Patrolman ID:</label> 		  
+               </div>
 			
                <div class="data">
-                  <label>Username</label>
-                  <input type="text" id ="username"  name="commUsername">
+                  <label>Resident ID:</label> 				  
                </div>
-               <div class="data">
-                  <label>Password</label>
-                  <input type="password" id="password"  name="commPassword">
-               </div>
-               <div class="btn">
-                  <button type="submit" name=login><b>login</b></button>
-               </div>
-             
-			  
 			   
+               <div class="data">
+                  <label>Username:</label>  				
+               </div>
+               
+			   <div class="data">
+                  <label>Password:</label>    
+               </div>
+           
+			
             </form>
+            
+            </div>
 			</div>
          </div>
       </div>

@@ -1,29 +1,25 @@
 package patrol.controller;
 
-import jakarta.servlet.RequestDispatcher; 
-import jakarta.servlet.ServletException;
+import jakarta.servlet.RequestDispatcher;
+import jakarta.servlet.ServletException; 
 import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
-
-import patrol.model.scheduleModel;
-import patrol.dao.scheduleDao;
 import java.io.IOException;
 
-/**
- * Servlet implementation class viewSchedule
- */
-public class viewSchedule extends HttpServlet {
+import patrol.model.Location;
+import patrol.dao.locationDAO;
+
+public class viewLocation extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-	private scheduleDao dao;
-       
+    private locationDAO dao;   
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public viewSchedule() {
+    public viewLocation() {
         super();
-        dao = new scheduleDao();
+        dao = new locationDAO();
         // TODO Auto-generated constructor stub
     }
 
@@ -32,9 +28,9 @@ public class viewSchedule extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		String scheduleId = request.getParameter("scheduleId");
-		request.setAttribute("schedule",scheduleDao.getScheduleDetails());
-		RequestDispatcher view = request.getRequestDispatcher("viewSchedule.jsp"); //schedule page
+		int locationId = Integer.parseInt(request.getParameter("locationId"));
+		request.setAttribute("location2",locationDAO.getLocationDetails());
+		RequestDispatcher view = request.getRequestDispatcher("viewDetailLocation.jsp");
 		view.forward(request, response);
 	}
 
