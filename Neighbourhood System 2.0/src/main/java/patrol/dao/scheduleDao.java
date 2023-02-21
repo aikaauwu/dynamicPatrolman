@@ -23,7 +23,7 @@ public class scheduleDao {
 	private static ResultSet rs = null;
 	private static String sql;
 	private String scheduleId;
-	private Date dateCreated;
+	private String dateCreated;
 	private String patrolmanId;
 	private String scheduleTime;
 	private String locationId;
@@ -48,7 +48,7 @@ public class scheduleDao {
 			ps.setString(1, scheduleId);
 			ps.setString(2, patrolmanId);
 			ps.setString(3, scheduleTime);
-			ps.setDate(4, (java.sql.Date) dateCreated);
+			ps.setString(4, dateCreated);
 			ps.setString(5, locationId);
 			//execute query
 			ps.executeUpdate();
@@ -81,7 +81,7 @@ public class scheduleDao {
 				s.setScheduleId(rs.getString("scheduleId"));
 				s.setPatrolmanId(rs.getString("patrolmanId"));
 				s.setScheduleTime(rs.getString("scheduleTime"));
-				s.setDateCreated(rs.getDate("dataCreated"));
+				s.setDateCreated(rs.getString("dataCreated"));
 				s.setLocationId(rs.getString("locationId"));
 			
 				schedule.add(s);

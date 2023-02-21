@@ -39,7 +39,7 @@ public class createScheduleController extends HttpServlet {
 		    s.setScheduleId(request.getParameter("scheduleId"));
 		    s.setPatrolmanId(request.getParameter("patrolmanId"));
 		    s.setScheduleTime(request.getParameter("scheduleTime"));
-		    s.setDateCreated(Date.parse((request.getParameter("dateCreated")));
+		    s.setDateCreated(request.getParameter("dateCreated"));
 		    s.setLocationId(request.getParameter("locationId"));
 		    
 		    dao.addSchedule(s);

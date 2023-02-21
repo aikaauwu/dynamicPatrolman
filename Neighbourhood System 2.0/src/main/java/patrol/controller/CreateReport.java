@@ -34,7 +34,7 @@ public class CreateReport extends HttpServlet {
 		// TODO Auto-generated method stub
 		
 		Report r = new Report();
-		r.setReportId(Integer.parseInt(request.getParameter("reportId")));
+		r.setReportId(request.getParameter("reportId"));
 		r.setPatrolmanId(request.getParameter("patrolmanId"));
 		r.setReportDescription(request.getParameter("reportDescription"));
 		r.setReportTimeSubmit(request.getParameter("reportTimeSubmit"));

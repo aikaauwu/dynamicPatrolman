@@ -27,7 +27,7 @@ public class ReportDAO {
 
 			rs = ps.executeQuery();
 			if(rs.next()) {
-			r.setReportId(rs.getInt("reportId"));
+			r.setReportId(rs.getString("reportId"));
 			r.setPatrolmanId(rs.getString("patrolmanId"));
 			r.setReportDescription(rs.getString("reportDescription"));
 			r.setReportTimeSubmit(rs.getString("reportDateSubmit"));
@@ -47,7 +47,7 @@ public class ReportDAO {
 		reportId = bean.getReportId();
 		patrolmanId = bean.getPatrolmanId();
 		reportDescription = bean.getReportDescription();
-		reportTimeSubmit = bean.getReportTimeSubmit();
+		reportDateSubmit = bean.getReportTimeSubmit();
 
 		try {			
 			//call getConnection() method
@@ -55,10 +55,10 @@ public class ReportDAO {
 			
 			//create statement
 			ps = con.prepareStatement("INSERT INTO report(reportId, patrolmanId, reportDescription, reportTimeSubmit) VALUES (?,?,?,?)");
-			ps.setInt(1,reportId);
+			ps.setString(1,reportId);
 			ps.setString(2,patrolmanId);
 			ps.setString(3,reportDescription);
-			ps.setString(4,reportTimeSubmit);
+			ps.setString(4,reportDateSubmit);
 
 			//execute query
 			ps.executeUpdate();
@@ -90,7 +90,7 @@ public class ReportDAO {
 					
 					while(rs.next()) {		//process result
 						Report r = new Report();
-						r.setReportId(rs.getInt("reportId"));
+						r.setReportId(rs.getString("reportId"));
 						r.setPatrolmanId(rs.getString("patrolmanId"));
 						r.setReportDescription(rs.getString("reportDescription"));
 						r.setReportTimeSubmit(rs.getString("reportTimeSubmit"));
@@ -112,17 +112,17 @@ public class ReportDAO {
 			reportId = bean.getReportId();
 			patrolmanId = bean.getPatrolmanId();
 			reportDescription = bean.getReportDescription();
-			reportTimeSubmit = bean.getReportTimeSubmit();
+			reportDateSubmit = bean.getReportTimeSubmit();
 	
 		try {			
 			//call getConnection() method
 			con = ConnectionManager.getConnection();
 			
 			//3. create statement
-			ps = con.prepareStatement("UPDATE report SET reportDescription=?, reportTimeSubmit=? WHERE reportId=?");
+			ps = con.prepareStatement("UPDATE report SET reportDescription=?, reportDateSubmit=? WHERE reportId=?");
 			ps.setString(1, reportDescription);
-			ps.setString(2, reportTimeSubmit);
-			ps.setInt(3, reportId);
+			ps.setString(2, reportDateSubmit);
+			ps.setString(3, reportId);
 			
 			//4. execute query
 			ps.executeUpdate();

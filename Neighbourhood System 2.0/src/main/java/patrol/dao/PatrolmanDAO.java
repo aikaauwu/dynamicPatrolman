@@ -204,6 +204,35 @@ public class PatrolmanDAO {
 		return patrolman; 
 	}
 	
+	public void updatePatrolman(Patrolman bean) {
+	    
+	      patrolmanId = bean.getPatrolmanId();
+	      residentId = bean.getResidentId();
+	      patrolmanUsername = bean.getPatrolmanUsername();
+	      patrolmanPassword = bean.getPatrolmanPassword();
+	  
+	    try {      
+	      //call getConnection() method
+	      con = ConnectionManager.getConnection();
+	      
+	      //3. create statement
+	      ps = con.prepareStatement("UPDATE patrolman SET patrolmanUsername=?, patrolmanPassword=? WHERE patrolmanId=?");
+	      ps.setString(1, patrolmanUsername);
+	      ps.setString(2, patrolmanPassword);
+	      ps.setString(3, patrolmanId);
+	      
+	      //4. execute query
+	      ps.executeUpdate();
+	      
+	      System.out.println("Successfully updated");
+	      
+	      //5. close connection
+	      con.close();
+	      
+	    }catch(Exception e) {
+	      e.printStackTrace();
+	    }
+	  }
 	
 	public static Resident getResidentProfile(String residentUsername) { 
 		Resident resident = new Resident();

@@ -2,15 +2,15 @@ package patrol.model;
 
 public class Report{
 	
-	private int reportId;
+	private String reportId;
 	private String patrolmanId;
 	private String reportDescription;
 	private String reportTimeSubmit;
 	
-	public int getReportId() {
+	public String getReportId() {
 		return reportId;
 	}
-	public void setReportId(int reportId) {
+	public void setReportId(String reportId) {
 		this.reportId = reportId;
 	}
 	public String getPatrolmanId() {
