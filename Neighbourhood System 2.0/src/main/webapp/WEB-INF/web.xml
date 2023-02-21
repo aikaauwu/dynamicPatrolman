@@ -149,4 +149,34 @@
     <servlet-name>PatrolmanViewProfileServlet</servlet-name>
     <url-pattern>/PatrolmanViewProfileServlet</url-pattern>
   </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>CreateReport</display-name>
+    <servlet-name>CreateReport</servlet-name>
+    <servlet-class>patrol.controller.CreateReport</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>CreateReport</servlet-name>
+    <url-pattern>/CreateReport</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>ListReport</display-name>
+    <servlet-name>ListReport</servlet-name>
+    <servlet-class>patrol.controller.ListReport</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ListReport</servlet-name>
+    <url-pattern>/ListReport</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>viewReport</display-name>
+    <servlet-name>viewReport</servlet-name>
+    <servlet-class>patrol.controller.viewReport</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>viewReport</servlet-name>
+    <url-pattern>/viewReport</url-pattern>
+  </servlet-mapping>
 </web-app>

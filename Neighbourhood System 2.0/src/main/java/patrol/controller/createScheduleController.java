@@ -1,12 +1,13 @@
 package patrol.controller;
 
-import jakarta.servlet.RequestDispatcher;
+import jakarta.servlet.RequestDispatcher; 
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import java.io.IOException;
+import java.sql.Date;
 
 import patrol.model.scheduleModel;
 import patrol.dao.scheduleDao;
@@ -38,7 +39,7 @@ public class createScheduleController extends HttpServlet {
 		    s.setScheduleId(request.getParameter("scheduleId"));
 		    s.setPatrolmanId(request.getParameter("patrolmanId"));
 		    s.setScheduleTime(request.getParameter("scheduleTime"));
-		    s.setDateCreated(request.getParameter("dateCreated"));
+		    s.setDateCreated(Date.parse((request.getParameter("dateCreated")));
 		    s.setLocationId(request.getParameter("locationId"));
 		    
 		    dao.addSchedule(s);

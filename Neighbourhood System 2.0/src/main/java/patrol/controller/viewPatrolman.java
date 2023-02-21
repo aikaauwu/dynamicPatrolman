@@ -36,7 +36,7 @@ public class viewPatrolman extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
 		String patrolmanId = request.getParameter("patrolmanId");
-		request.setAttribute("patrolmans",PatrolmanDAO.getPatrolmanDetails(patrolmanId));
+		request.setAttribute("patrolmans",PatrolmanDAO.getPatrolmanProfile(patrolmanId));
 		RequestDispatcher view = request.getRequestDispatcher("comm viewPatProfile.jsp"); //schedule page
 		view.forward(request, response);
 	}
