@@ -99,4 +99,24 @@
     <servlet-name>ResidentViewProfileServlet</servlet-name>
     <url-pattern>/ResidentViewProfileServlet</url-pattern>
   </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>createScheduleController</display-name>
+    <servlet-name>createScheduleController</servlet-name>
+    <servlet-class>patrol.controller.createScheduleController</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>createScheduleController</servlet-name>
+    <url-pattern>/createScheduleController</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>listPatrolmanController</display-name>
+    <servlet-name>listPatrolmanController</servlet-name>
+    <servlet-class>patrol.controller.listPatrolmanController</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>listPatrolmanController</servlet-name>
+    <url-pattern>/listPatrolmanController</url-pattern>
+  </servlet-mapping>
 </web-app>

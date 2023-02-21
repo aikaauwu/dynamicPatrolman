@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
+     <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -137,6 +138,7 @@ form .btn:hover button{
 				
 				<a href="HOMEPAGE COM.jsp"><img style="margin-left: -100px;" src="img/logout.png"></a>
 			</div>
+			</div>
 			
 			<div class="center">
 	
@@ -158,32 +160,21 @@ form .btn:hover button{
 	   
   </tr>
   
-  <c:forEach items="${patrolmans} var="patrolman">
+  <c:forEach items="${patrolmans}" var="patrolman">
   <tr>
   		<td><c:out value="${patrolman.patrolmanId}" /></td>
   		<td><c:out value="${patrolman.residentId}" /></td>
   		<td><c:out value="${patrolman.patrolmanUsername}" /></td>
   		<td><c:out value="${patrolman.patrolmanPassword}" /></td>  		
-    	 <td><a href="viewPatrolman?action=view&patrolmanId=<c:out value="${patrolman.patrolmanId}"/> class="button">View</a></td>
+    	 <td><a href="viewPatrolman?action=view&patrolmanId=<c:out value="${patrolman.patrolmanId}"/>" class="button" >View</a></td>
 </c:forEach>
-  <tr>
-    <td>-</td>
-    <td>-</td>
-    <td>-</td>
-	 <td>-</td>
-	 <td><a href="comm viewPatProfile.jsp" class="button button1"><b>VIEW </b></a></td>
-  </tr>
-  
-  <tr>
-    <td>-</td>
-    <td>-</td>
-    <td>-</td>
-	 <td>-</td>
-	 <td><a href="comm viewPatProfile.jsp" class="button button1"><b>VIEW </b></a></td>
-  </tr>
+
  
 </table>
 </div>
-	</div>
+</div>
+</div>
+</div>
+</div>
 </body>
 </html>

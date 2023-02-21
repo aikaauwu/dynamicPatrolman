@@ -34,7 +34,7 @@ public class viewSchedule extends HttpServlet {
 		// TODO Auto-generated method stub
 		String scheduleId = request.getParameter("scheduleId");
 		request.setAttribute("schedule",scheduleDao.getScheduleDetails());
-		RequestDispatcher view = request.getRequestDispatcher("viewSchedule.jsp"); //schedule page
+		RequestDispatcher view = request.getRequestDispatcher("viewDetailSchedule.jsp"); //schedule page
 		view.forward(request, response);
 	}
 

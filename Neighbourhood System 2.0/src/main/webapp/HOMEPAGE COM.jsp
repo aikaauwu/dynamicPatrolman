@@ -169,8 +169,8 @@ a{margin-right: 4px;}
 			        <b href=""><img class="card-img" src="img/calander img.png" alt="SCHEDULE" /></b>
 		            <h3>SCHEDULE</h3>
 		
-				<a href="comm viewSchedule.jsp" target="_blank">View Schedule</a>
-				<a href="comm ViewCreateSchedule.jsp" target="_blank">Create Schedule</a>
+				<a href="listScheduleController" target="_blank">View Schedule</a>
+				<a href="createScheduleController" target="_blank">Create Schedule</a>
 				<hr>.</hr>
 				
 				
@@ -192,7 +192,7 @@ a{margin-right: 4px;}
 				
 					<a href="comm createPat.jsp" target =" blank">Create Patrolman</a>
 					<a href="comm ViewUpPat.jsp" target="_blank">Update Patrolman</a>
-					<a href="comm viewPat.jsp" target="_blank">View Patrolman</a>
+					<a href="listPatrolman" target="_blank">View Patrolman</a>
 					<hr>.</hr>
 				
 		        </div>
