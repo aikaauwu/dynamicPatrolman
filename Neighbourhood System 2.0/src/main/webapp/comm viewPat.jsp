@@ -150,28 +150,28 @@ form .btn:hover button{
       <table class="table table-bordered">
        <h2>VIEW PATROLMAN</h2>
 
-<table>
-  <tr>
-     <th>Patrolman ID</th>
-	<th>Resident ID</th>
-    <th>Username</th>
-    <th>Password</th>
-    <th>Action</th>
-	   
-  </tr>
-  
-  <c:forEach items="${patrolmans}" var="patrolman">
-  <tr>
-  		<td><c:out value="${patrolman.patrolmanId}" /></td>
-  		<td><c:out value="${patrolman.residentId}" /></td>
-  		<td><c:out value="${patrolman.patrolmanUsername}" /></td>
-  		<td><c:out value="${patrolman.patrolmanPassword}" /></td>  		
-    	 <td><a href="viewPatrolman?action=view&patrolmanId=<c:out value="${patrolman.patrolmanId}"/>" class="button" >View</a></td>
-</c:forEach>
+<table class="table table-bordered">
+       
+    
 
- 
-</table>
-</div>
+			<table>
+							<tr>
+								<th>Patrolman Id</th>
+								<th>Patrolman Username</th>
+								<th>Patrolman Password</th>
+								<th>Resident Id</th>														
+							</tr>
+							<c:forEach items="${patrolmans}" var="patrolman">
+								<tr>
+									<td><c:out value="${patrolman.patrolmanId}" /></td>
+									<td><c:out value="${patrolman.patrolmanUsername}" /></td>
+									<td><c:out value="${patrolman.patrolmanPassword}" /></td>
+									<td><c:out value="${patrolman.residentId}" /></td>
+							</c:forEach>
+			</table>
+			
+			</table>
+
 </div>
 </div>
 </div>

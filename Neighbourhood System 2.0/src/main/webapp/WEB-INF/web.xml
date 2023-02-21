@@ -119,4 +119,34 @@
     <servlet-name>listPatrolmanController</servlet-name>
     <url-pattern>/listPatrolmanController</url-pattern>
   </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>listScheduleController</display-name>
+    <servlet-name>listScheduleController</servlet-name>
+    <servlet-class>patrol.controller.listScheduleController</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>listScheduleController</servlet-name>
+    <url-pattern>/listScheduleController</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>viewPatrolman</display-name>
+    <servlet-name>viewPatrolman</servlet-name>
+    <servlet-class>patrol.controller.viewPatrolman</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>viewPatrolman</servlet-name>
+    <url-pattern>/viewPatrolman</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>PatrolmanViewProfileServlet</display-name>
+    <servlet-name>PatrolmanViewProfileServlet</servlet-name>
+    <servlet-class>patrol.controller.PatrolmanViewProfileServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>PatrolmanViewProfileServlet</servlet-name>
+    <url-pattern>/PatrolmanViewProfileServlet</url-pattern>
+  </servlet-mapping>
 </web-app>

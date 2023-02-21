@@ -148,7 +148,7 @@ a{margin-right: 4px;}
 <div class="header">
 
   <div class="header-right">
-   <a href="Pat Profile.jsp">PROFILE</a>
+   <a href="PatrolmanViewProfileServlet">PROFILE</a>
     <a href="login patrolman.jsp">LOGOUT</a>
   </div>
 </div>

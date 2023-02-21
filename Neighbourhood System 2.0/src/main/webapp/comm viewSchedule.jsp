@@ -191,7 +191,7 @@ a{margin-right: 4px;}
   		<td><c:out value="${schedule.scheduleTime}" /></td>
   		<td><c:out value="${schedule.dateCreated}" /></td>
   		<td><c:out value="${schedule.locationId}" /></td>
-  		 <td><a href="viewSchedule?action=view&scheduleId=<c:out value="${schedule.scheduleId}"" class="button">View</a></td>
+  		 <td><a href="listScheduleController?action=view&scheduleId=<c:out value="${schedule.scheduleId}"/>" class="button">View</a></td>
 </c:forEach>
  
 </table>
