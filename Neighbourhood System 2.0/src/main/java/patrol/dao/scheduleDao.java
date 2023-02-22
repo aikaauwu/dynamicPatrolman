@@ -13,6 +13,7 @@ import java.util.*;
 import java.util.Date;
 
 import patrol.connection.ConnectionManager;
+import patrol.model.Resident;
 import patrol.model.scheduleModel;
 
 
@@ -23,7 +24,7 @@ public class scheduleDao {
 	private static ResultSet rs = null;
 	private static String sql;
 	private String scheduleId;
-	private String dateCreated;
+	private String scheduleDate;
 	private String patrolmanId;
 	private String scheduleTime;
 	private String locationId;
@@ -33,7 +34,7 @@ public class scheduleDao {
 		
 		scheduleId = bean.getScheduleId();
 		patrolmanId = bean.getPatrolmanId();
-		dateCreated = bean.getDateCreated();
+		scheduleDate = bean.getScheduleDate();
 		scheduleTime = bean.getScheduleTime();
 		locationId = bean.getLocationId();
 	
@@ -48,7 +49,7 @@ public class scheduleDao {
 			ps.setString(1, scheduleId);
 			ps.setString(2, patrolmanId);
 			ps.setString(3, scheduleTime);
-			ps.setString(4, dateCreated);
+			ps.setString(4, scheduleDate);
 			ps.setString(5, locationId);
 			//execute query
 			ps.executeUpdate();
@@ -81,7 +82,7 @@ public class scheduleDao {
 				s.setScheduleId(rs.getString("scheduleId"));
 				s.setPatrolmanId(rs.getString("patrolmanId"));
 				s.setScheduleTime(rs.getString("scheduleTime"));
-				s.setDateCreated(rs.getString("dataCreated"));
+				s.setScheduleDate(rs.getString("scheduleDate"));
 				s.setLocationId(rs.getString("locationId"));
 			
 				schedule.add(s);
@@ -95,6 +96,38 @@ public class scheduleDao {
 			e.printStackTrace(); 
 		}
 
+		return schedule; 
+	}
+	
+	public static scheduleModel getScheduleDetail(String scheduleId) { 
+		scheduleModel schedule = new scheduleModel();
+		try {
+			//call getConnection() method
+			con = ConnectionManager.getConnection();
+
+			
+			ps = con.prepareStatement("SELECT * FROM schedule WHERE scheduleId=?");
+		
+
+			//execute query
+		
+			
+			rs = ps.executeQuery();
+			if(rs.next()) {
+			schedule.setScheduleId(rs.getString("scheduleId"));
+			schedule.setPatrolmanId(rs.getString("patrolmanId"));
+			schedule.setScheduleTime(rs.getString("scheduleTime"));
+			schedule.setScheduleDate(rs.getString("scheduleDate"));
+			schedule.setLocationId(rs.getString("locationId"));
+			
+			
+			//close connection
+			con.close();
+			}
+
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
 		return schedule; 
 	}
 

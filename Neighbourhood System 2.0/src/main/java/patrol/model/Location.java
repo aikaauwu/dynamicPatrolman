@@ -3,7 +3,7 @@ package patrol.model;
 public class Location {
 	
 	private String locationArea;
-	private int locationId;
+	private String locationId;
 	private String locationAddress;
 	
 	public String getLocationArea() {
@@ -12,10 +12,10 @@ public class Location {
 	public void setLocationArea(String locationArea) {
 		this.locationArea = locationArea;
 	}
-	public int getLocationId() {
+	public String getLocationId() {
 		return locationId;
 	}
-	public void setLocationId(int locationId) {
+	public void setLocationId(String locationId) {
 		this.locationId = locationId;
 	}
 	public String getLocationAddress() {

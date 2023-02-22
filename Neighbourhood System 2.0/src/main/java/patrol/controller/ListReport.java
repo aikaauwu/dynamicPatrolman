@@ -12,7 +12,7 @@ import patrol.dao.ReportDAO;
 /**
  * Servlet implementation class ListShawlController
  */
-@WebServlet("/ListReport")
+@WebServlet("/ListReports")
 public class ListReport extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 	private ReportDAO dao;       

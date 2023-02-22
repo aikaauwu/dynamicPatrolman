@@ -14,6 +14,7 @@ import java.util.Date;
 
 import patrol.connection.ConnectionManager;
 import patrol.model.Location;
+import patrol.model.Patrolman;
 import patrol.dao.locationDAO;
 
 
@@ -25,7 +26,7 @@ public class locationDAO {
 	private static ResultSet rs = null;
 	private static String sql;
 	private String locatianArea;
-	private int locationId;
+	private String locationId;
 	private String locationAddress;
 	
 	
@@ -79,7 +80,7 @@ public class locationDAO {
 			
 			while(rs.next()) {		//process result
 				Location location2 = new Location();
-				location2.setLocationId(rs.getInt("locationId"));
+				location2.setLocationId(rs.getString("locationId"));
 				location2.setLocationArea(rs.getString("locationArea"));
 				location2.setLocationAddress(rs.getString("locationAddress"));
 				locations.add(location2);
@@ -93,6 +94,35 @@ public class locationDAO {
 			e.printStackTrace(); 
 		}
 
+		return locations; 
+	}
+	
+	public static Location getLocationDetail(String locationId) { 
+		Location locations = new Location();
+		try {
+			//call getConnection() method
+			con = ConnectionManager.getConnection();
+
+			
+			ps = con.prepareStatement("SELECT * FROM location =?");
+
+			//execute query
+			
+			rs = ps.executeQuery();
+			if(rs.next()) {
+				locations.setLocationId(rs.getString("locationId"));
+				locations.setLocationArea(rs.getString("locationArea"));
+				locations.setLocationAddress(rs.getString("locationAddress"));
+				
+				
+			
+			//close connection
+			con.close();
+			}
+
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
 		return locations; 
 	}
 

@@ -179,4 +179,14 @@
     <servlet-name>viewReport</servlet-name>
     <url-pattern>/viewReport</url-pattern>
   </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>viewScheduleDetail</display-name>
+    <servlet-name>viewScheduleDetail</servlet-name>
+    <servlet-class>patrol.controller.viewScheduleDetail</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>viewScheduleDetail</servlet-name>
+    <url-pattern>/viewScheduleDetail</url-pattern>
+  </servlet-mapping>
 </web-app>

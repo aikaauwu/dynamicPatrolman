@@ -13,7 +13,7 @@ import patrol.model.Report;
 /**
  * Servlet implementation class CreateResidentController
  */
-@WebServlet("/CreateReport")
+@WebServlet("/CreateReports")
 public class CreateReport extends HttpServlet {
 	private static final long serialVersionUID = 1L;
     private ReportDAO dao;    
