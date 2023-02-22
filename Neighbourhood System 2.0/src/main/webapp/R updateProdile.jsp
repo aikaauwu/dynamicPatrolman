@@ -115,7 +115,7 @@ a {text-decoration:none;}
 		 
             <div class="text"><b>Update Profile</b></div>
 			<div id="frmRegistration">
-            <form action="login_code.php">
+            <form >
 			<div class="hero">
 			
 			<form action="ResidentUpdateDetailServlet" method="post">

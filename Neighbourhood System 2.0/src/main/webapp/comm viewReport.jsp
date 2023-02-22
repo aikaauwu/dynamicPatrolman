@@ -181,13 +181,7 @@ a{margin-right: 4px;}
     <th>Action</th>
 	   
   <table>
-							<tr>
-								<th>Report Id</th>
-								<th>Patrolman Id</th>
-								<th>Report Description</th>
-								
-								<th colspan="3"></th>
-							</tr>
+						
 							<c:forEach items="${reports}" var="report">
 								<tr>
 									<td><c:out value="${report.reportId}" /></td>

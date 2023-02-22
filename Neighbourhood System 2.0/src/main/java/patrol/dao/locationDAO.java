@@ -26,7 +26,7 @@ public class locationDAO {
 	private static ResultSet rs = null;
 	private static String sql;
 	private String locatianArea;
-	private String locationId;
+	private int locationId;
 	private String locationAddress;
 	
 	
@@ -80,7 +80,7 @@ public class locationDAO {
 			
 			while(rs.next()) {		//process result
 				Location location2 = new Location();
-				location2.setLocationId(rs.getString("locationId"));
+				location2.setLocationId(rs.getInt("locationId"));
 				location2.setLocationArea(rs.getString("locationArea"));
 				location2.setLocationAddress(rs.getString("locationAddress"));
 				locations.add(location2);
@@ -97,20 +97,20 @@ public class locationDAO {
 		return locations; 
 	}
 	
-	public static Location getLocationDetail(String locationId) { 
+	public static Location getLocationDetail(int locationId) { 
 		Location locations = new Location();
 		try {
 			//call getConnection() method
 			con = ConnectionManager.getConnection();
 
 			
-			ps = con.prepareStatement("SELECT * FROM location =?");
+			ps = con.prepareStatement("SELECT * FROM location where locationId=?");
 
 			//execute query
 			
 			rs = ps.executeQuery();
 			if(rs.next()) {
-				locations.setLocationId(rs.getString("locationId"));
+				locations.setLocationId(rs.getInt("locationId"));
 				locations.setLocationArea(rs.getString("locationArea"));
 				locations.setLocationAddress(rs.getString("locationAddress"));
 				

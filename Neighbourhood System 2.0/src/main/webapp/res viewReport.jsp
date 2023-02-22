@@ -164,8 +164,7 @@ a{margin-right: 4px;}
 </div>
 			
 			<div class="center">
-	
-         
+	  
   <div class="imgcontainer">
 <div class="container">
   <div class="row">
@@ -174,23 +173,20 @@ a{margin-right: 4px;}
        <h2>VIEW REPORT</h2>
 
 <table class="table table-bordered">
-       
-       <h2>VIEW RESIDENTS</h2>
-
 			<table>
 							<tr>
 								<th>Report Id</th>
 								<th>Patrolman Id</th>
 								<th>Report Description</th>
 								
-								<th colspan="3"></th>
+								
 							</tr>
 							<c:forEach items="${reports}" var="report">
 								<tr>
 									<td><c:out value="${report.reportId}" /></td>
 									<td><c:out value="${report.patrolmanId}" /></td>
 									<td><c:out value="${report.reportDescription}" /></td>
-									<td><a href="viewReport?action=view&reportId=<c:out value="${report.reportId}"/>" class="button">View</a></td>
+									<td><a href="viewReport?action=get&reportId=<c:out value="${report.reportId}"/>" class="button">View</a></td>
 							</c:forEach>
 			</table>
 			
