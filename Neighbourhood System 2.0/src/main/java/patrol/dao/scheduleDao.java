@@ -23,7 +23,7 @@ public class scheduleDao {
 	private static ResultSet rs = null;
 	private static String sql;
 	private String scheduleId;
-	private String dateCreated;
+	private String scheduleDate;
 	private String patrolmanId;
 	private String scheduleTime;
 	private String locationId;
@@ -33,7 +33,7 @@ public class scheduleDao {
 		
 		scheduleId = bean.getScheduleId();
 		patrolmanId = bean.getPatrolmanId();
-		dateCreated = bean.getDateCreated();
+		scheduleDate = bean.getscheduleDate();
 		scheduleTime = bean.getScheduleTime();
 		locationId = bean.getLocationId();
 	
@@ -44,11 +44,11 @@ public class scheduleDao {
 
 			//create statement
 						
-			ps = con.prepareStatement("INSERT INTO schedule(scheduleId,patrolmanId,scheduleTime,dateCreated,locationId)VALUES(?,?,?,?,?)");
+			ps = con.prepareStatement("INSERT INTO schedule(scheduleId,patrolmanId,scheduleTime,scheduleDate,locationId)VALUES(?,?,?,?,?)");
 			ps.setString(1, scheduleId);
 			ps.setString(2, patrolmanId);
 			ps.setString(3, scheduleTime);
-			ps.setString(4, dateCreated);
+			ps.setString(4, scheduleDate);
 			ps.setString(5, locationId);
 			//execute query
 			ps.executeUpdate();
@@ -81,7 +81,7 @@ public class scheduleDao {
 				s.setScheduleId(rs.getString("scheduleId"));
 				s.setPatrolmanId(rs.getString("patrolmanId"));
 				s.setScheduleTime(rs.getString("scheduleTime"));
-				s.setDateCreated(rs.getString("dataCreated"));
+				s.setscheduleDate(rs.getString("scheduleDate"));
 				s.setLocationId(rs.getString("locationId"));
 			
 				schedule.add(s);

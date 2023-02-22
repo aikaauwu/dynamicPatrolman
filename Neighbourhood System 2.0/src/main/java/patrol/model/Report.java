@@ -5,7 +5,7 @@ public class Report{
 	private String reportId;
 	private String patrolmanId;
 	private String reportDescription;
-	private String reportTimeSubmit;
+	private String reportDateSubmit;
 	
 	public String getReportId() {
 		return reportId;
@@ -25,10 +25,10 @@ public class Report{
 	public void setReportDescription(String reportDescription) {
 		this.reportDescription = reportDescription;
 	}
-	public String getReportTimeSubmit() {
-		return reportTimeSubmit;
+	public String getreportDateSubmit() {
+		return reportDateSubmit;
 	}
-	public void setReportTimeSubmit(String reportTimeSubmit) {
-		this.reportTimeSubmit = reportTimeSubmit;
+	public void setreportDateSubmit(String reportDateSubmit) {
+		this.reportDateSubmit = reportDateSubmit;
 	}
 }

@@ -179,4 +179,47 @@
     <servlet-name>viewReport</servlet-name>
     <url-pattern>/viewReport</url-pattern>
   </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>listScheduleControllerPat</display-name>
+    <servlet-name>listScheduleControllerPat</servlet-name>
+    <servlet-class>patrol.controller.listScheduleControllerPat</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>listScheduleControllerPat</servlet-name>
+    <url-pattern>/listScheduleControllerPat</url-pattern>
+  </servlet-mapping>
+   <servlet>
+    <description></description>
+    <display-name>viewSchedule</display-name>
+    <servlet-name>viewSchedule</servlet-name>
+    <servlet-class>patrol.controller.viewSchedule</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>viewSchedule</servlet-name>
+    <url-pattern>/viewSchedule</url-pattern>
+  </servlet-mapping>
+    <servlet>
+    <description></description>
+    <display-name>listScheduleControllerComm</display-name>
+    <servlet-name>listScheduleControllerComm</servlet-name>
+    <servlet-class>patrol.controller.listScheduleControllerComm</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>listScheduleControllerComm</servlet-name>
+    <url-pattern>/listScheduleControllerComm</url-pattern>
+  </servlet-mapping>
+  
+    <servlet>
+    <description></description>
+    <display-name>ListReportComm</display-name>
+    <servlet-name>ListReportComm</servlet-name>
+    <servlet-class>patrol.controller.ListReportComm</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ListReportComm</servlet-name>
+    <url-pattern>/ListReportComm</url-pattern>
+  </servlet-mapping>
+  
+  
 </web-app>

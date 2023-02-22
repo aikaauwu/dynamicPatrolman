@@ -13,7 +13,7 @@ import patrol.model.Report;
 /**
  * Servlet implementation class CreateResidentController
  */
-@WebServlet("/CreateReport")
+@WebServlet("/CreateReports")
 public class CreateReport extends HttpServlet {
 	private static final long serialVersionUID = 1L;
     private ReportDAO dao;    
@@ -37,7 +37,7 @@ public class CreateReport extends HttpServlet {
 		r.setReportId(request.getParameter("reportId"));
 		r.setPatrolmanId(request.getParameter("patrolmanId"));
 		r.setReportDescription(request.getParameter("reportDescription"));
-		r.setReportTimeSubmit(request.getParameter("reportTimeSubmit"));
+		r.setreportDateSubmit(request.getParameter("reportDateSubmit"));
 		
 		dao.addReport(r); //invoke method addShawl() in ShawlDAO
 		

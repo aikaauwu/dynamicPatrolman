@@ -186,12 +186,12 @@ a{margin-right: 4px;}
 							
 <c:forEach items="${schedules}" var="schedule">
   <tr>
-  		<td><c:out value="${schedule.patrolId}" /></td>
+  		<td><c:out value="${schedule.patrolmanId}" /></td>
   		<td><c:out value="${schedule.scheduleId}" /></td>
   		<td><c:out value="${schedule.scheduleTime}" /></td>
-  		<td><c:out value="${schedule.dateCreated}" /></td>
+  		<td><c:out value="${schedule.scheduleDate}" /></td>
   		<td><c:out value="${schedule.locationId}" /></td>
-  		 <td><a href="listScheduleController?action=view&scheduleId=<c:out value="${schedule.scheduleId}"/>" class="button">View</a></td>
+  		 <td><a href="viewScheduleComm?action=view&scheduleId=<c:out value="${schedule.scheduleId}"/>" class="button">View</a></td>
 </c:forEach>
  
 </table>

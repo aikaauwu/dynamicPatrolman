@@ -16,21 +16,21 @@ public class ReportDAO {
 	private String reportId;
 	private String patrolmanId, reportDescription, reportDateSubmit;
 		//list
-		public static Report getReportDetail(int reportId) { 
+		public static Report getReportDetail(String reportId) { 
 		Report r = new Report();
 		try {
 			//call getConnection() method
 			con = ConnectionManager.getConnection();
 
 			ps = con.prepareStatement("SELECT * FROM report WHERE reportId=?");
-			ps.setInt(1, reportId);
+			ps.setString(1, reportId);
 
 			rs = ps.executeQuery();
 			if(rs.next()) {
 			r.setReportId(rs.getString("reportId"));
 			r.setPatrolmanId(rs.getString("patrolmanId"));
 			r.setReportDescription(rs.getString("reportDescription"));
-			r.setReportTimeSubmit(rs.getString("reportDateSubmit"));
+			r.setreportDateSubmit(rs.getString("reportDateSubmit"));
 			//close connection
 			con.close();
 			}
@@ -47,14 +47,14 @@ public class ReportDAO {
 		reportId = bean.getReportId();
 		patrolmanId = bean.getPatrolmanId();
 		reportDescription = bean.getReportDescription();
-		reportDateSubmit = bean.getReportTimeSubmit();
+		reportDateSubmit = bean.getreportDateSubmit();
 
 		try {			
 			//call getConnection() method
 			con = ConnectionManager.getConnection();
 			
 			//create statement
-			ps = con.prepareStatement("INSERT INTO report(reportId, patrolmanId, reportDescription, reportTimeSubmit) VALUES (?,?,?,?)");
+			ps = con.prepareStatement("INSERT INTO report(reportId, patrolmanId, reportDescription, reportDateSubmit) VALUES (?,?,?,?)");
 			ps.setString(1,reportId);
 			ps.setString(2,patrolmanId);
 			ps.setString(3,reportDescription);
@@ -93,7 +93,7 @@ public class ReportDAO {
 						r.setReportId(rs.getString("reportId"));
 						r.setPatrolmanId(rs.getString("patrolmanId"));
 						r.setReportDescription(rs.getString("reportDescription"));
-						r.setReportTimeSubmit(rs.getString("reportTimeSubmit"));
+						//r.setreportDateSubmit(rs.getString("reportDateSubmit"));
 						report.add(r);
 						}
 				//close connection
@@ -112,7 +112,7 @@ public class ReportDAO {
 			reportId = bean.getReportId();
 			patrolmanId = bean.getPatrolmanId();
 			reportDescription = bean.getReportDescription();
-			reportDateSubmit = bean.getReportTimeSubmit();
+			reportDateSubmit = bean.getreportDateSubmit();
 	
 		try {			
 			//call getConnection() method

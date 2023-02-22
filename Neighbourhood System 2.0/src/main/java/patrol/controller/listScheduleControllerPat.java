@@ -15,13 +15,13 @@ import patrol.dao.scheduleDao;
 /**
  * Servlet implementation class listScheduleController
  */
-public class listScheduleController extends HttpServlet {
+public class listScheduleControllerPat extends HttpServlet {
 	private static final long serialVersionUID = 1L;
     private scheduleDao dao;  
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public listScheduleController() {
+    public listScheduleControllerPat() {
         super();
         dao = new scheduleDao();
         // TODO Auto-generated constructor stub
@@ -34,7 +34,7 @@ public class listScheduleController extends HttpServlet {
 		// TODO Auto-generated method stub
 		//String scheduleId = request.getParameter("scheduleId");
 		request.setAttribute("schedules",scheduleDao.getScheduleDetails());
-		RequestDispatcher view = request.getRequestDispatcher("res viewSchedule.jsp");
+		RequestDispatcher view = request.getRequestDispatcher("pat viewSchedule.jsp");
 		view.forward(request,  response);
 	}
 
