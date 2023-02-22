@@ -34,7 +34,7 @@ public class viewLocation extends HttpServlet {
 		view.forward(request, response);
 	}
 
-	/**
+	/**AJAX
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
 	
