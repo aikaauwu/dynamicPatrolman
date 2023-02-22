@@ -31,10 +31,18 @@ public class scheduleModel {
 		this.scheduleTime = scheduleTime;
 	}
 	
-	public String getScheduleDate() {
+
+
+
+	public String getscheduleDate() {
+
 		return scheduleDate;
 	}
-	public void setScheduleDate(String scheduleDate) {
+
+
+
+	public void setscheduleDate(String scheduleDate) {
+
 		this.scheduleDate = scheduleDate;
 	}
 	

@@ -179,16 +179,15 @@ a{margin-right: 4px;}
      <th>Patrolman ID</th>
 	<th>Username</th>
     <th>Schedule ID</th>
-    <th>Time</th>
 	<th>Date</th>
-	<th>Location</th>
+	<th>Location ID</th>
 	   
 <c:forEach items="${schedules}" var="schedule">
   <tr>
-  		<td><c:out value="${schedule.patrolId}" /></td>
+  		<td><c:out value="${schedule.patrolmanId}" /></td>
   		<td><c:out value="${schedule.scheduleId}" /></td>
   		<td><c:out value="${schedule.scheduleTime}" /></td>
-  		<td><c:out value="${schedule.dateCreated}" /></td>
+  		<td><c:out value="${schedule.scheduleDate}" /></td>
   		<td><c:out value="${schedule.locationId}" /></td>
 </c:forEach>
  

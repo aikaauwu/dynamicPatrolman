@@ -181,19 +181,20 @@ a{margin-right: 4px;}
     <th>Time</th>
 	<th>Date</th>
 	<th>Location</th>
-	<th>Tools</th>
+	<th>Location Details</th>
+	   <th>Schedule Details</th>
 	   
   </tr>
   <tr>
 <c:forEach items="${schedules}" var="schedule">
   <tr>
-  		<td><c:out value="${schedule.patrolId}" /></td>
+  		<td><c:out value="${schedule.patrolmanId}" /></td>
   		<td><c:out value="${schedule.scheduleId}" /></td>
   		<td><c:out value="${schedule.scheduleTime}" /></td>
-  		<td><c:out value="${schedule.dateCreated}" /></td>
+  		<td><c:out value="${schedule.scheduleDate}" /></td>
   		<td><c:out value="${schedule.locationId}" /></td>
-  		<td><a href="viewDetailLocation.jsp" class="button button1"><b>VIEW </b></a></td>
-	 	<td><a href="viewDetailSchedule.jsp" class="button button1"><b>VIEW </b></a></td>
+  		<td><a href="viewLocation?action=view&locationId=<c:out value="${schedule.locationId}"/>"  class="button button1"><b>VIEW </b></a></td>
+	 	<td><a href="viewSchedule?action=view&scheduleId=<c:out value="${schedule.scheduleId}"/>" class="button button1"><b>VIEW </b></a></td>
 </c:forEach>
 	
   </tr>

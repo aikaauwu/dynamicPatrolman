@@ -37,7 +37,7 @@ public class CreateReport extends HttpServlet {
 		r.setReportId(request.getParameter("reportId"));
 		r.setPatrolmanId(request.getParameter("patrolmanId"));
 		r.setReportDescription(request.getParameter("reportDescription"));
-		r.setReportTimeSubmit(request.getParameter("reportTimeSubmit"));
+		r.setreportDateSubmit(request.getParameter("reportDateSubmit"));
 		
 		dao.addReport(r); //invoke method addShawl() in ShawlDAO
 		

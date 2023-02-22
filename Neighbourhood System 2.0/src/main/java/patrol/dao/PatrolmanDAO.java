@@ -49,7 +49,7 @@ public class PatrolmanDAO {
 			patrolmanPassword = bean.getPatrolmanPassword();
 			*/
 			
-			ps = con.prepareStatement("INSERT INTO patrolman(patrolmanId,residentId,patrolmanUsername,patrolmanPassword)VALUES(?,?,?)");
+			ps = con.prepareStatement("INSERT INTO patrolman(patrolmanId,residentId,patrolmanUsername,patrolmanPassword)VALUES(?,?,?,?)");
 			ps.setString(1, patrolmanId);
 			ps.setInt(2, residentId);
 			ps.setString(2, patrolmanUsername);

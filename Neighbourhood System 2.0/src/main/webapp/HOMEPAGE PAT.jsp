@@ -163,7 +163,7 @@ a{margin-right: 4px;}
 			        <b href=""><img class="card-img" src="img/calander img.png" alt="SCHEDULE" /></b>
 		            <h3>SCHEDULE</h3>
 		
-				<a href="pat viewSchedule.jsp" target="_blank">View Schedule</a>
+				<a href="listScheduleControllerPat">View Schedule</a>
 				<hr>.</hr>
 				
 				

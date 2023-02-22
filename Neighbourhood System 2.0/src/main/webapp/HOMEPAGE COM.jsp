@@ -169,7 +169,7 @@ a{margin-right: 4px;}
 			        <b href=""><img class="card-img" src="img/calander img.png" alt="SCHEDULE" /></b>
 		            <h3>SCHEDULE</h3>
 		
-				<a href="listScheduleController">View Schedule</a>
+				<a href="listScheduleControllerComm">View Schedule</a>
 				<a href="createScheduleController" target="_blank">Create Schedule</a>
 				<hr>.</hr>
 				
@@ -181,7 +181,7 @@ a{margin-right: 4px;}
 			        <b href=""><img class="card-img" src="img/report p.png" alt="REPORT" /></b>
 			        <h3>REPORT</h3>
 				
-					<a href="comm viewReport.jsp" target="_blank">View Report</a>
+					<a href="ListReportComm">View Report</a>
 					<hr>.</hr>
 				
 		        </div>

@@ -30,8 +30,8 @@ public class ListReport extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		request.setAttribute("report", ReportDAO.getReportDetails());
-		RequestDispatcher view = request.getRequestDispatcher("comm viewReport.jsp");
+		request.setAttribute("reports", ReportDAO.getReportDetails());
+		RequestDispatcher view = request.getRequestDispatcher("res viewReport.jsp");
 		view.forward(request, response);
 	}
 }

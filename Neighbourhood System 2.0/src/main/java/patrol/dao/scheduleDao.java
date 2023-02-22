@@ -34,7 +34,9 @@ public class scheduleDao {
 		
 		scheduleId = bean.getScheduleId();
 		patrolmanId = bean.getPatrolmanId();
-		scheduleDate = bean.getScheduleDate();
+
+		scheduleDate = bean.getscheduleDate();
+
 		scheduleTime = bean.getScheduleTime();
 		locationId = bean.getLocationId();
 	
@@ -45,7 +47,7 @@ public class scheduleDao {
 
 			//create statement
 						
-			ps = con.prepareStatement("INSERT INTO schedule(scheduleId,patrolmanId,scheduleTime,dateCreated,locationId)VALUES(?,?,?,?,?)");
+			ps = con.prepareStatement("INSERT INTO schedule(scheduleId,patrolmanId,scheduleTime,scheduleDate,locationId)VALUES(?,?,?,?,?)");
 			ps.setString(1, scheduleId);
 			ps.setString(2, patrolmanId);
 			ps.setString(3, scheduleTime);
@@ -82,7 +84,7 @@ public class scheduleDao {
 				s.setScheduleId(rs.getString("scheduleId"));
 				s.setPatrolmanId(rs.getString("patrolmanId"));
 				s.setScheduleTime(rs.getString("scheduleTime"));
-				s.setScheduleDate(rs.getString("scheduleDate"));
+				s.setscheduleDate(rs.getString("scheduleDate"));
 				s.setLocationId(rs.getString("locationId"));
 			
 				schedule.add(s);
@@ -114,11 +116,11 @@ public class scheduleDao {
 			
 			rs = ps.executeQuery();
 			if(rs.next()) {
-			schedule.setScheduleId(rs.getString("scheduleId"));
-			schedule.setPatrolmanId(rs.getString("patrolmanId"));
-			schedule.setScheduleTime(rs.getString("scheduleTime"));
-			schedule.setScheduleDate(rs.getString("scheduleDate"));
-			schedule.setLocationId(rs.getString("locationId"));
+				schedule.setScheduleId(rs.getString("scheduleId"));
+				schedule.setPatrolmanId(rs.getString("patrolmanId"));
+				schedule.setScheduleTime(rs.getString("scheduleTime"));
+				schedule.setscheduleDate(rs.getString("scheduleDate"));
+				schedule.setLocationId(rs.getString("locationId"));
 			
 			
 			//close connection
